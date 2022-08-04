@@ -1,5 +1,4 @@
 import React from 'react'
-
 import {Container, Col, Form} from 'react-bootstrap'
 import logo  from '../../assets/images/Vector-logo.png'
 import {Formik} from "formik"
@@ -37,41 +36,40 @@ const loginSchema = Yup.object().shape({
             </div>
     
             <div className="text-center my-5">
-                Don't have a Negozio account? Let's <Link to="/register" className="fw-bold text-decoration-none text">Register</Link>
+                Don't have a Negozio account? Let's <Link to="/registerseller" className="fw-bold text-decoration-none text">Register</Link>
             </div>
      
       </>
     )
   }
 
-
-function Login() {
+function LoginSeller() {
     return(
         <>
-          <Container>
-            <Col className="m-4 p-5 text-center justify-content-center align-items-center">
-              <div className="m-5 p-5"> 
-                  <div className="image-fluid d-flex justify-content-center gap-3">
-                  <img src={logo} alt="logo" />
-                  <span className="my-3">Negozio</span>
-                  </div>
+    <Container>
+      <Col className="m-4 p-5 text-center justify-content-center align-items-center">
+        <div className="m-5 p-5"> 
+            <div className="image-fluid d-flex justify-content-center gap-3">
+            <img src={logo} alt="logo" />
+            <span className="my-3">Negozio</span>
+            </div>
 
-                  <h4 className="my-5">Please login with your account</h4>
+            <h4 className="my-5">Please login with your account</h4>
 
-                  <div>
-                  <button className="btn btn-lg button-role customer text-center">Customer</button>
-                  <Link to="/loginseller" className="text-decoration-none">
-                  <button className="btn btn-lg button-role text-center">Seller</button>
-                  </Link> 
-                  </div>
+            <div>
+            <Link to="/login" className="text-decoration-none">
+            <button className="btn btn-lg button-role text-center">Customer</button>
+            </Link>
+            <button className="btn btn-lg button-role customer text-center">Seller</button>
+            </div>
 
-                  <Formik initialValues={{email: '', password: ''}} validationSchema={loginSchema}>
-                      {(props) =><AuthValid {...props} />}
-                  </Formik>
-              </div>
-            </Col>
-          </Container>
+            <Formik initialValues={{email: '', password: ''}} validationSchema={loginSchema}>
+                {(props) =><AuthValid {...props} />}
+            </Formik>
+        </div>
+      </Col>
+    </Container>
         </>
     )
 }
-export default Login 
+export default LoginSeller
