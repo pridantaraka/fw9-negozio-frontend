@@ -7,6 +7,7 @@ import Register from './pages/auth/Register'
 import RegisterSeller from './pages/auth/RegisterSeller'
 import ResetPassword from './pages/auth/ResetPassword'
 import ConfirmResetPassword from './pages/auth/ConfirmResetPassword'
+import Profile from './pages/profile/Profile'
 
 function App() {
     return(
@@ -14,6 +15,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="login" element={<Login />} />
+            <Route path="/profile" element={<Profile/>}/>
             <Route path="loginseller" element={<LoginSeller />} />
             <Route path="register" element={<Register />} />
             <Route path="registerseller" element={<RegisterSeller />} />
