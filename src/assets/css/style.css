@@ -1,8 +1,48 @@
+/* :root {
+ --color-primary:
+} */
+
+
 .colors{
     background: #FCFFA6;
     background-color: #1C3391; /*button color */
     background-color: #1C3391; /*logo color */
     color: #FFFFFF; /*text color */
     color: #FFFFFF; /*text color */
-
 } 
+
+/* Auth Pages 
+(Login, Register, Forgot Password) */
+
+
+.button-auth {
+    background-color: #fcffa6;
+    border-radius: 25px;
+}
+
+.button-auth:hover {
+    background-color: #fcfdd8;
+}
+
+.button-role {
+    border-radius: 4px 0px 0px 4px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+}
+
+.customer {
+    background-color: #fcffa6;
+}
+
+.customer:hover {
+    background-color: #fcffa6;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.customer:focus {
+    background-color: #fcffa6;
+}
+
+.forgot-text {
+    margin-left: 300px;
+    margin-bottom: 50px;
+}
