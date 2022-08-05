@@ -2,74 +2,126 @@
  --color-primary:
 } */
 
-
-.colors{
-    background: #FCFFA6;
-    background-color: #1C3391; /*button color */
-    background-color: #1C3391; /*logo color */
-    color: #FFFFFF; /*text color */
-    color: #FFFFFF; /*text color */
+.colors {
+  background: #fcffa6;
+  background-color: #1c3391; /*button color */
+  background-color: #1c3391; /*logo color */
+  color: #ffffff; /*text color */
+  color: #ffffff; /*text color */
+}
 
 /* Auth Pages 
 (Login, Register, Forgot Password) */
 
-
 .button-auth {
-    background-color: #fcffa6;
-    border-radius: 25px;
+  background-color: #fcffa6;
+  border-radius: 25px;
 }
 
 .button-auth:hover {
-    background-color: #fcfdd8;
+  background-color: #fcfdd8;
 }
 
 .button-role {
-    border-radius: 4px 0px 0px 4px;
-    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 4px 0px 0px 4px;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
 }
 
 .customer {
-    background-color: #fcffa6;
+  background-color: #fcffa6;
 }
 
 .customer:hover {
-    background-color: #fcffa6;
-    border-radius: 4px 0px 0px 4px;
+  background-color: #fcffa6;
+  border-radius: 4px 0px 0px 4px;
 }
 
 .customer:focus {
-    background-color: #fcffa6;
+  background-color: #fcffa6;
 }
 
 .forgot-text {
-    margin-left: 300px;
-    margin-bottom: 50px;
+  margin-left: 300px;
+  margin-bottom: 50px;
 }
 /* Navigasi Home1 */
-.nav-home-height{
-    min-height: 100px;
-    box-shadow: 0px 6px 75px rgba(100, 87, 87, 0.05);
+.nav-home-height {
+  min-height: 100px;
+  box-shadow: 0px 6px 75px rgba(100, 87, 87, 0.05);
 }
 .nav-button {
-    width: 100px;
-    height: 36px;
-    border-radius: 1rem;
-    padding-top: 0;
-    background-color: #1C3391;
-    font-size: 14px;
-    font-weight: 400px;
+  width: 100px;
+  height: 36px;
+  border-radius: 1rem;
+  padding-top: 0;
+  background-color: #1c3391;
+  font-size: 14px;
+  font-weight: 400px;
 }
-.nav-logo-border{
-    border: 1px solid;
-    padding: 0.7rem;
-    border-radius: 0.5rem;
-    
+.nav-logo-border {
+  border: 1px solid;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
 }
-.logo-color{
-    color: #9B9B9B;
+.logo-color {
+  color: #9b9b9b;
 }
-.nav-search-box{
-    border-radius: 1rem;
-    width: 560px;
+.nav-search-box {
+  border-radius: 1rem;
+  width: 560px;
 }
 /* Navigasi Home1 */
+
+/* My Bag Page */
+.main-page-bag {
+  padding: 50px 150px;
+}
+
+.bag-head {
+  margin-bottom: 30px;
+}
+
+.card-bag {
+  background: #ffffff;
+  box-shadow: 0px 0px 8px rgba(115, 115, 115, 0.25);
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.card-bag div p {
+  margin: unset;
+}
+
+.card-bag button {
+  background-color: unset;
+  border: unset;
+  color: #1c3391;
+}
+
+.card-bag input {
+  accent-color: #1c3391;
+}
+
+.card-bag div div button {
+  width: 36px;
+  height: 36px;
+}
+
+.card-submit-bag {
+  padding: 24px;
+  background: #ffffff;
+  box-shadow: 0px 0px 8px rgba(115, 115, 115, 0.25);
+  border-radius: 4px;
+}
+
+.card-submit-bag .submit-btn {
+  background-color: #1c3391;
+  border: unset;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-page-bag {
+    padding: 50px 20px;
+  }
+}
+/* My Bag Page */
