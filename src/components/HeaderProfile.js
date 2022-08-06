@@ -38,16 +38,24 @@ export default function HeaderProfile() {
                         />
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
-                        <Nav.Link eventKey="link-1"><div className='align-self-center logo-color'><CgShoppingCart size={24}/></div></Nav.Link>
+                        <Nav.Link eventKey="link-1" href="/mybag">
+                            <div className='align-self-center logo-color'><CgShoppingCart size={24}/></div>
+                        </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
-                        <Nav.Link eventKey="link-1"><div className='align-self-center logo-color'><CgBell size={24} /></div></Nav.Link>
+                        <Nav.Link eventKey="link-1">
+                            <div className='align-self-center logo-color'><CgBell size={24} /></div>
+                        </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
-                        <Nav.Link eventKey="link-1"><div className='align-self-center logo-color'><CgMail size={24} /></div></Nav.Link>
+                        <Nav.Link eventKey="link-1">
+                            <div className='align-self-center logo-color'><CgMail size={24} /></div>
+                        </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
-                        <Nav.Link eventKey="link-1"><div className='align-self-center logo-color'><CgProfile size={24}/></div></Nav.Link>
+                        <Nav.Link eventKey="link-1" href="/profile">
+                            <div className='align-self-center logo-color'><CgProfile size={24}/></div>
+                        </Nav.Link>
                     </Nav.Item>
                 </Nav>
             </header>

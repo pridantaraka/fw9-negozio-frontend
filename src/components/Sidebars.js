@@ -9,7 +9,7 @@ import profSide from "../assets/images/sidebar.png"
 function Sidebars() {
   return (
     <>
-    <Col className="col-md-3 d-flex flex-column sidebar-wrap">
+    <Col className="col-md-3 d-flex flex-column sidebar-wrap side-height h-100">
             <div className="d-flex flex-column">
                   <Link to="" className="text-decoration-none text-muted">
                     <div className="d-flex flex-row gap-3">
