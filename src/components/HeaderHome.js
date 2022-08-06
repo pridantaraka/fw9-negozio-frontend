@@ -1,7 +1,7 @@
 import { Button, Nav, Form } from 'react-bootstrap'
 import { VscFilterFilled } from "react-icons/vsc";
 import { CgShoppingCart } from "react-icons/cg";
-
+import { Link } from 'react-router-dom';
 import logo1 from '../assets/images/shopping-bag1.png'
 
 export default function HeaderHome() {
@@ -31,10 +31,14 @@ export default function HeaderHome() {
                         <Nav.Link eventKey="link-1"><div className='align-self-center logo-color px-0'><CgShoppingCart size={24} /></div></Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
-                        <Button className='nav-button'>Login</Button>
+                        <Link to="/login" className="text-decoration-none">
+                            <Button className='nav-button'>Login</Button>
+                        </Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
-                        <Button className='nav-button'>SignUp</Button>
+                        <Link to="/login" className="text-decoration-none">
+                            <Button className='nav-button'>Sign Up</Button>
+                        </Link>
                     </Nav.Item>
                 </Nav>
             </header>
