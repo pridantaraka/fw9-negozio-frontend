@@ -8,6 +8,7 @@ import Register from './pages/auth/Register'
 import RegisterSeller from './pages/auth/RegisterSeller'
 import ResetPassword from './pages/auth/ResetPassword'
 import ConfirmResetPassword from './pages/auth/ConfirmResetPassword'
+import Checkout from './pages/profile/Checkout'
 import ProfileSeller from './pages/profile/ProfileSeller'
 import ShippingAddress from './pages/profile/ShippingAddress'
 import MyOrder from './pages/profile/MyOrder'
@@ -19,6 +20,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="login" element={<Login />} />
+            <Route path="/Checkout" element={<Checkout/>}/>
             <Route path="profile" element={<ProfileSeller/>}/>
             <Route path="shippingaddress" element={<ShippingAddress />} />
             <Route path="myorder" element={<MyOrder />} />
