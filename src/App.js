@@ -27,7 +27,7 @@ function App() {
             <Route path="registerseller" element={<RegisterSeller />} />
             <Route path="resetpassword" element={<ResetPassword />} />
             <Route path="confirmresetpassword" element={<ConfirmResetPassword />} />
-            <Route path="my-bag" element={<MyBag />} />
+            <Route path="mybag" element={<MyBag />} />
         </Routes>
         </>
     )

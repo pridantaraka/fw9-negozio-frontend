@@ -1,7 +1,6 @@
 import { Nav, Form } from 'react-bootstrap'
 import { VscFilterFilled } from "react-icons/vsc";
 import { CgShoppingCart } from "react-icons/cg";
-import { Link } from 'react-router-dom';
 import React from 'react';
 import ModalFilter from './ModalFilter';
 import logo1 from '../assets/images/shopping-bag1.png'
@@ -38,22 +37,24 @@ export default function HeaderHome() {
                         />
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex align-items-center'>
-                        <Nav.Link eventKey="link-1">
+                        <Nav.Link eventKey="link-1" href="/mybag">
                         <button className='btn btn-md logo-button'>
                             <div className='align-self-center logo-color px-0'><CgShoppingCart size={24} /></div>
                         </button>
                         </Nav.Link>
                     </Nav.Item>
-
+                    {/* <NavLink to="/faq" activeClassName="selected">
+                    FAQs
+                    </NavLink> */}
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
-                        <Link to="/login" className="text-decoration-none">
-                            <button className='nav-button'>Login</button>
-                        </Link>
+                        <Nav.Link eventKey="link-1" href="/login">
+                            <button className='btn nav-button pb-1'>Login</button>
+                        </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
-                        <Link to="/login" className="text-decoration-none">
-                            <button className='nav-button'>Sign Up</button>
-                        </Link>
+                        <Nav.Link eventKey="link-1" href="/signup">
+                            <button className='btn nav-button pb-1'>Sign Up</button>
+                        </Nav.Link>
                     </Nav.Item>
                 </Nav>
             </header>
