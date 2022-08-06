@@ -21,8 +21,8 @@ function ModalAddress() {
 
   return (
     <>
-    <div className='new-address p-4 m-3 text-center' onClick={handleShow}>Add new address</div>
-
+    <div className='new-address p-4 m-3 text-center all-font' onClick={handleShow}>Add new address</div>
+    
     <Modal show={show} onHide={handleClose} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
     <Modal.Header className="d-flex justify-content-center align-items-center" closeButton>
           <Modal.Title className="text-center justify-content-center fw-bold">Add new address</Modal.Title>

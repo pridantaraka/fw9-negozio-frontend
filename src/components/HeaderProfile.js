@@ -10,7 +10,7 @@ export default function HeaderProfile() {
     const [modalShow, setModalShow] = React.useState(false);
     return(
         <>
-            <header className='mw-100 nav-home-height py-3 d-flex justify-content-around align-items-center'>
+            <header className='mw-100 nav-home-height py-3 d-flex justify-content-around align-items-center all-font'>
                 <Nav defaultActiveKey="/home" as="ul" className='gap-3'>
                     <Nav.Item as="li" className='logo-color'>
                         <Nav.Link href="/" className='d-flex flex-row'>

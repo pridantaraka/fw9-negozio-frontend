@@ -42,7 +42,7 @@ const resetSchema = Yup.object().shape({
 function ResetPassword() {
     return(
         <>
-    <Container>
+    <Container className='all-font'>
       <Col className="m-4 p-5 text-center justify-content-center align-items-center">
         <div className="m-5 p-5"> 
             <div className="image-fluid d-flex justify-content-center gap-3">
