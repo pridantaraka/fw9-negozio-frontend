@@ -13,7 +13,7 @@ function ModalAddress() {
   const changeRadio = (e) => {
     setChecked(() => {
       return {
-        laki: false,
+        primary: false,
         [e.target.value]: true
       };
     });
@@ -24,10 +24,10 @@ function ModalAddress() {
     <div className='new-address p-4 m-3 text-center all-font' onClick={handleShow}>Add new address</div>
     
     <Modal show={show} onHide={handleClose} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
-    <Modal.Header className="d-flex justify-content-center align-items-center" closeButton>
-          <Modal.Title className="text-center justify-content-center fw-bold">Add new address</Modal.Title>
+    <Modal.Header className="d-flex justify-content-center align-items-center border-0" closeButton>
+          <Modal.Title className="text-center justify-content-center fw-bold modal-title-address">Add new address</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="mt-3">
           <div className="d-flex flex-column gap-2">
               <span className="text-muted">Save address as (ex : home address, office address)</span>
               <Form>
@@ -96,14 +96,15 @@ function ModalAddress() {
                 <input
                   type="checkbox" value="primary" onChange={changeRadio}/> Make it the primary address
                 </label>
-
-                <div className="d-flex flex-row gap-2 justify-content-end">
-                  <Button variant="outline-secondary" className='button-cancel-address'>Cancel</Button>
-                  <Button variant="danger" className='button-save-address'>Save</Button>
-                </div>
+          
           </div>
 
-          
+          <Modal.Footer className="mt-5 border-0">
+                <div className="d-flex flex-row gap-2 justify-content-end">
+                  <Button variant="outline-secondary" className='button-cancel-address' onClick={handleClose}>Cancel</Button>
+                  <Button variant="danger" className='button-save-address'>Save</Button>
+                </div>
+          </Modal.Footer>
         </Modal.Body>
     </Modal>
     </>
