@@ -2,6 +2,7 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from './pages/home/Home'
+import ProductsDetail from './pages/home/ProductsDetail'
 import Login from './pages/auth/Login'
 import LoginSeller from './pages/auth/LoginSeller'
 import Register from './pages/auth/Register'
@@ -29,6 +30,7 @@ function App() {
             <Route path="registerseller" element={<RegisterSeller />} />
             <Route path="resetpassword" element={<ResetPassword />} />
             <Route path="confirmresetpassword" element={<ConfirmResetPassword />} />
+            <Route path="/ProductsDetail" element={<ProductsDetail />} />
             <Route path="mybag" element={<MyBag />} />
         </Routes>
         </>
