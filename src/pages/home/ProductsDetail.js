@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { AiTwotoneStar } from 'react-icons/ai';
 import Button from 'react-bootstrap/Button';
-import DataProductDetail from '../../components/CategoryParts';
+import CategoryParts from '../../components/CategoryParts';
+import DataProductDetail from '../../components/DataProductDetail';
 import Container from 'react-bootstrap/Container';
 import '../../assets/css/ProductsDetail.css';
 
@@ -155,18 +156,18 @@ function ProductDetail() {
         <small className='never-seen'>You’ve never seen it before!</small>
       </div>
       <div className='d-flex flex-row gap-4 mb-5 mt-4'>
-        <DataProductDetail />
-        <DataProductDetail />
-        <DataProductDetail />
-        <DataProductDetail />
-        <DataProductDetail />
+        <CategoryParts />
+        <CategoryParts />
+        <CategoryParts />
+        <CategoryParts />
+        <CategoryParts />
       </div>
       <div className='d-flex flex-row gap-4'>
-        <DataProductDetail />
-        <DataProductDetail />
-        <DataProductDetail />
-        <DataProductDetail />
-        <DataProductDetail />
+        <CategoryParts />
+        <CategoryParts />
+        <CategoryParts />
+        <CategoryParts />
+        <CategoryParts />
       </div>
     </Container>
   )
