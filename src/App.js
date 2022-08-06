@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from './pages/home/Home'
@@ -10,6 +11,7 @@ import ConfirmResetPassword from './pages/auth/ConfirmResetPassword'
 import ProfileSeller from './pages/profile/ProfileSeller'
 import ShippingAddress from './pages/profile/ShippingAddress'
 import MyOrder from './pages/profile/MyOrder'
+import MyBag from './pages/profile/MyBag';
 
 function App() {
     return(
@@ -25,9 +27,10 @@ function App() {
             <Route path="registerseller" element={<RegisterSeller />} />
             <Route path="resetpassword" element={<ResetPassword />} />
             <Route path="confirmresetpassword" element={<ConfirmResetPassword />} />
+            <Route path="my-bag" element={<MyBag />} />
         </Routes>
         </>
     )
 }
 
-export default App
+export default App;

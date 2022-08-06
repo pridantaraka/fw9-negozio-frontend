@@ -9,8 +9,12 @@ function Home() {
             <Container className='mw-100'>
                 <Row>
                     <HeaderHome />
-                    <Sidebars />
-        
+                    <Col md={6} className='d-flex flex-warp'>
+                        <div>Hello</div>
+                        <button>
+                            aall name
+                        </button>
+                    </Col>
                 </Row>
             </Container>
         </>
