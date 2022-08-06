@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { AiTwotoneStar } from 'react-icons/ai';
+// import { AiOutlineMinusCircle } from 'react-icons/ai';
+// import { AiOutlinePlusCircle } from 'react-icons/ai';
 import Button from 'react-bootstrap/Button';
-import CategoryParts from '../../components/CategoryParts';
-import DataProductDetail from '../../components/DataProductDetail';
+import DataProductDetail from '../../components/CategoryParts';
 import Container from 'react-bootstrap/Container';
-import '../../assets/css/ProductsDetail.css';
+import '../../assets/css/ProductDetail.css';
 
 import main from '../../assets/images/Mask Group Main.png'
 import mg from '../../assets/images/Mask Group.png'
@@ -156,18 +157,18 @@ function ProductDetail() {
         <small className='never-seen'>You’ve never seen it before!</small>
       </div>
       <div className='d-flex flex-row gap-4 mb-5 mt-4'>
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
       </div>
       <div className='d-flex flex-row gap-4'>
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
       </div>
     </Container>
   )
