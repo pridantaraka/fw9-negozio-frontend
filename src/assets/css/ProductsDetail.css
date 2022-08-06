@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.right-main {
+    margin-left: -17vw;
+}
+
+.right-main .baju, .description-pd, .review-pd {
+    font-style: normal;
+    font-family: 'Metropolis';
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 28px;
+    color: #222222;
+}
+
+.right-main small,
+.right-main .price,
+.breadcrumb a {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #9B9B9B;
+    text-decoration: none;
+}
+
+.star, .star2 {
+    color: #FFBA49;
+}
+
+.star2 {
+    font-size: 1.5vw;
+}
+
+.main-img img {
+    width: 56%;
+}
+
+.dollar-pd20 {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 33px;
+    color: #222222;
+}
+
+.right-main .color,
+.size-jumlah .size,
+.size-jumlah .jumlah {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #222222;
+}
+
+.pd-button .chat-bag {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: #222222;
+    width: 9vw;
+    border-radius: 2vw;
+}
+
+.pd-button .buy-now {
+    color: #FFFFFF;
+    background: #DB3022;
+    border-radius: 25px;
+    width: 20vw;
+}
+
+.size-jumlah button {
+    border-radius: 5vw;
+    font-weight: 700;
+}
+
+.btn-minus {
+    height: 35px;
+}
+
+.counter-poin {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 16px;
+    color: #222222;
+}
+
+.condition, .desc-tittle {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: #222222;
+}
+
+.new {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #DB3022;
+}
+
+.desc-text {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #9B9B9B;
+}
+
+.rating-pd {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 60px;
+    color: #222222;
+}
+
+.per10 {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #9B9B9B;
+}
+
+.like-this {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 22px;
+    color: #222222;
+}
+
+.never-seen {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: #9B9B9B;
+}
+
+/* Data Product Detail (data-pd) */
+.data-pd {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 14px rgba(173, 173, 173, 0.25);
+    border-radius: 13px;
+}
+
+.data-pd img {
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+}
+
+.data-pd h5 {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.data-pd span {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #DB3022;
+}
+
+.data-pd {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    color: #9B9B9B;
+}
