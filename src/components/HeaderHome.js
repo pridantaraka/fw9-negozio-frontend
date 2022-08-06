@@ -10,7 +10,7 @@ export default function HeaderHome() {
     const [modalShow, setModalShow] = React.useState(false);
     return(
         <>
-            <header className='mw-100 nav-home-height py-3 d-flex justify-content-around align-items-center'>
+            <header className='mw-100 nav-home-height py-3 d-flex justify-content-around align-items-center all-font'>
                 <Nav defaultActiveKey="/home" as="ul" className='gap-3'>
                     <Nav.Item as="li" className='logo-color'>
                         <Nav.Link href="/" className='d-flex flex-row'>
@@ -47,12 +47,12 @@ export default function HeaderHome() {
 
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
                         <Link to="/login" className="text-decoration-none">
-                            <Button className='nav-button'>Login</Button>
+                            <button className='nav-button'>Login</button>
                         </Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
                         <Link to="/login" className="text-decoration-none">
-                            <Button className='nav-button'>Sign Up</Button>
+                            <button className='nav-button'>Sign Up</button>
                         </Link>
                     </Nav.Item>
                 </Nav>
