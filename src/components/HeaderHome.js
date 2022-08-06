@@ -1,9 +1,9 @@
 import { Nav, Form } from 'react-bootstrap'
 import { VscFilterFilled } from "react-icons/vsc";
 import { CgShoppingCart } from "react-icons/cg";
+import { Link } from 'react-router-dom';
 import React from 'react';
 import ModalFilter from './ModalFilter';
-
 import logo1 from '../assets/images/shopping-bag1.png'
 
 export default function HeaderHome() {
@@ -44,11 +44,16 @@ export default function HeaderHome() {
                         </button>
                         </Nav.Link>
                     </Nav.Item>
-                    <Nav.Item as="li" className='d-flex align-items-center'>
-                        <button className='btn btn-md nav-button'>Login</button>
+
+                    <Nav.Item as="li" className='d-flex flex-row align-items-center'>
+                        <Link to="/login" className="text-decoration-none">
+                            <Button className='nav-button'>Login</Button>
+                        </Link>
                     </Nav.Item>
-                    <Nav.Item as="li" className='d-flex align-items-center'>
-                        <button className='btn btn-md nav-button'>SignUp</button>
+                    <Nav.Item as="li" className='d-flex flex-row align-items-center'>
+                        <Link to="/login" className="text-decoration-none">
+                            <Button className='nav-button'>Sign Up</Button>
+                        </Link>
                     </Nav.Item>
                 </Nav>
             </header>

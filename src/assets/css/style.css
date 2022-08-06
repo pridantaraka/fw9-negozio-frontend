@@ -5,7 +5,7 @@
 } */
 
 
-.colors{
+.colors {
     background: #FCFFA6;
     background-color: #1C3391; /*button color */
     background-color: #1C3391; /*logo color */
@@ -54,7 +54,8 @@
 /* Navigasi Home1 */
 .nav-home-height{
     min-height: 100px;
-    box-shadow: 0px 6px 40px rgba(173, 173, 173, 0.25);
+    box-shadow: 0px 6px 75px rgba(100, 87, 87, 0.05);
+    background-color: #FFFFFF;
 }
 .nav-button {
     width: 100px;
@@ -84,6 +85,125 @@
 }
 /* Navigasi Home1 */
 
+/* Side Bars */
+
+.sidebar-wrap {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 100vh;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.sidebar-prof {
+    border-radius: 50%;
+}
+
+.icon-sidebar {
+    color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.icon-wrap {
+    width: 32px;
+    height: 32px;
+    background-color: #456BF3;
+    border-radius: 50%;
+}
+
+.icon-wrap-one {
+    width: 32px;
+    height: 32px;
+    background-color: #F36F45;
+    border-radius: 50%;
+}
+
+.icon-wrap-two {
+    width: 32px;
+    height: 32px;
+    background-color: #F3456F;
+    border-radius: 50%;
+}
+
+/* Profile page */
+
+.main-container {
+    z-index: -99;
+    background-color: #9B9B9B;
+}
+
+.profile-container {
+    background-color: #FFFFFF;
+    border: 1px solid #9B9B9B;
+    border-radius: 4px;
+}
+
+.button-save {
+    border-radius: 25px;
+    width: 100px;
+    height: 36px;
+}
+
+.vertical-rule {
+    height: 150px;
+}
+
+.profile-pict {
+    border-radius: 50%;
+}
+
+.button-image {
+    border: 1px solid #9B9B9B;
+    border-radius: 24px;
+}
+
+/* Shipping Address */
+
+.new-address {
+    border: 2px dashed #9B9B9B;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.address {
+    background: #FFFFFF;
+    border: 1px solid #DB3022;
+    border-radius: 4px;
+}
+
+/* My Order */
+
+.order-container {
+    background-color: #FFFFFF;
+    border: 1px solid #9B9B9B;
+    border-radius: 4px;
+    height: 636px;
+}
+
+.table-name:active {
+    border-bottom: 4px solid #DB3022;
+}
+
+/* Modal address */ 
+
+.button-cancel-address {
+    width: 160px;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 24px;
+}
+
+.button-save-address {
+    width: 160px;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 24px;
+}
+
+.form-modal {
+    width: 350px;
+    height: 48px;
+}
 /* Modul Filter */
 .modal-height{
     min-height: 758px;
