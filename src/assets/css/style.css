@@ -1,13 +1,16 @@
+
+
 /* :root {
  --color-primary:
 } */
 
-.colors {
-  background: #fcffa6;
-  background-color: #1c3391; /*button color */
-  background-color: #1c3391; /*logo color */
-  color: #ffffff; /*text color */
-  color: #ffffff; /*text color */
+
+.colors{
+    background: #FCFFA6;
+    background-color: #1C3391; /*button color */
+    background-color: #1C3391; /*logo color */
+    color: #FFFFFF; /*text color */
+    color: #FFFFFF; /*text color */
 }
 
 /* Auth Pages 
@@ -23,6 +26,7 @@
 }
 
 .button-role {
+
   border-radius: 4px 0px 0px 4px;
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
 }
@@ -44,33 +48,90 @@
   margin-left: 300px;
   margin-bottom: 50px;
 }
+/* Auth Pages 
+(Login, Register, Forgot Password) */
+
 /* Navigasi Home1 */
-.nav-home-height {
-  min-height: 100px;
-  box-shadow: 0px 6px 75px rgba(100, 87, 87, 0.05);
+.nav-home-height{
+    min-height: 100px;
+    box-shadow: 0px 6px 40px rgba(173, 173, 173, 0.25);
 }
 .nav-button {
-  width: 100px;
-  height: 36px;
-  border-radius: 1rem;
-  padding-top: 0;
-  background-color: #1c3391;
-  font-size: 14px;
-  font-weight: 400px;
+    width: 100px;
+    height: 36px;
+    border-radius: 1rem;
+    padding-top: 0;
+    background-color: #1C3391;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400px;
 }
-.nav-logo-border {
-  border: 1px solid;
-  padding: 0.7rem;
-  border-radius: 0.5rem;
+.nav-logo-border{
+    border: 1px solid #020202 solid;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    
 }
-.logo-color {
-  color: #9b9b9b;
+.logo-color{
+    color: #9B9B9B;
 }
-.nav-search-box {
-  border-radius: 1rem;
-  width: 560px;
+.logo-button{
+    border: none;
+}
+.nav-search-box{
+    border-radius: 1rem;
+    width: 560px;
 }
 /* Navigasi Home1 */
+
+/* Modul Filter */
+.modal-height{
+    min-height: 758px;
+}
+.box-filter-header{
+    box-shadow: 0px 6px 30px rgba(19, 18, 18, 0.25);
+}
+.box-filter-footer{
+    box-shadow: 0px 6px 50px  rgba(19, 18, 18, 0.25);
+}
+.box-modal-category{
+    border-radius: 8px;
+    width: 100px;
+    height: 40px;
+    background-color: #1C3391;
+    color: #FFFFFF;
+}
+.box-modal-size{
+    border-radius: 8px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #020202 solid #383838;
+}
+.box-modal-size:focus{
+    background-color: #1C3391;
+    color: #FFFFFF;
+}
+
+.choose-color1{
+    background-color: #020202;
+}
+.choose-color2{
+    background-color: #FFFFFF;
+    box-shadow: 0px 6px 10px rgba(19, 18, 18, 0.25);
+}
+.choose-color3{
+    background-color: #B82222;
+}
+.choose-color4{
+    background-color: #BEA9A9;
+}
+.choose-color5{
+    background-color: #E2BB8D;
+}
+.choose-color6{
+    background-color: #151867;
+}
+/* Modul Filter */
 
 /* My Bag Page */
 .main-page-bag {
@@ -124,4 +185,3 @@
     padding: 50px 20px;
   }
 }
-/* My Bag Page */
