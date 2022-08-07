@@ -1,7 +1,6 @@
-import { DropdownButton } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import Dropdown from 'react-bootstrap/Dropdown';
 import Modal from 'react-bootstrap/Modal';
+import DropDownList from './DropDownList';
 
 export default function ModalFilter(props) {
   return (
@@ -82,27 +81,15 @@ export default function ModalFilter(props) {
         <div>
           <h5>Brand</h5>
           <div>
-            
-          <DropdownButton
-        id="dropdown-button-dark-example2"
-        variant=""
-        menuVariant=""
-        title="adidas Originals, Jack & Jones, s.Oliver"
-        className="mt-2"
-      >
-        <Dropdown.Item href="#/action-1">Nike</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Puma</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Adidas</Dropdown.Item>
-        <Dropdown.Item href="#/action-4">Jack & Jones</Dropdown.Item>
-        <Dropdown.Item href="#/action-4">Js.Oliver</Dropdown.Item>
-      </DropdownButton>
+            <DropDownList />
           </div>
         </div>
+        
         </div>
       </Modal.Body>
       <Modal.Footer className='box-filter-footer d-flex justify-content-center'>
-        <Button onClick={props.onHide}>Discard</Button>
-        <Button onClick={props.onHide}>Apply</Button>
+        <Button onClick={props.onHide} className='modal-filter-btn'>Discard</Button>
+        <Button onClick={props.onHide} className='modal-filter-btn'>Apply</Button>
       </Modal.Footer>
     </Modal>
   );

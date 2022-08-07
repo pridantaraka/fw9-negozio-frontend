@@ -2,12 +2,16 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from './pages/home/Home'
+import ProductsDetail from './pages/home/ProductsDetail'
 import Login from './pages/auth/Login'
 import LoginSeller from './pages/auth/LoginSeller'
 import Register from './pages/auth/Register'
 import RegisterSeller from './pages/auth/RegisterSeller'
 import ResetPassword from './pages/auth/ResetPassword'
 import ConfirmResetPassword from './pages/auth/ConfirmResetPassword'
+import Profile from './pages/profile/Profile'
+import Category from './pages/home/Category'
+import Checkout from './pages/profile/Checkout'
 import ProfileSeller from './pages/profile/ProfileSeller'
 import ShippingAddress from './pages/profile/ShippingAddress'
 import MyOrder from './pages/profile/MyOrder'
@@ -19,6 +23,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="login" element={<Login />} />
+            <Route path="/Checkout" element={<Checkout/>}/>
             <Route path="profile" element={<ProfileSeller/>}/>
             <Route path="shippingaddress" element={<ShippingAddress />} />
             <Route path="myorder" element={<MyOrder />} />
@@ -27,7 +32,9 @@ function App() {
             <Route path="registerseller" element={<RegisterSeller />} />
             <Route path="resetpassword" element={<ResetPassword />} />
             <Route path="confirmresetpassword" element={<ConfirmResetPassword />} />
-            <Route path="my-bag" element={<MyBag />} />
+            <Route path="Category" element={<Category />} />
+            <Route path="/ProductsDetail" element={<ProductsDetail />} />
+            <Route path="mybag" element={<MyBag />} />
         </Routes>
         </>
     )
