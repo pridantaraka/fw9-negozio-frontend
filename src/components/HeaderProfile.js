@@ -5,7 +5,6 @@ import { CgMail, CgBell, CgShoppingCart, CgProfile } from "react-icons/cg";
 import ModalFilter from './ModalFilter';
 
 import logo1 from '../assets/images/shopping-bag1.png'
-import '../assets/css/style.css'
 
 export default function HeaderProfile() {
     const [modalShow, setModalShow] = React.useState(false);
