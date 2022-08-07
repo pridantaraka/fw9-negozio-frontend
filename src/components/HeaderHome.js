@@ -48,7 +48,7 @@ export default function HeaderHome() {
                     </NavLink> */}
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
                         <Nav.Link eventKey="link-1" href="/login">
-                            <button className='btn nav-button pb-1'>Login</button>
+                            <button className='btn nav-button pb-1'>aLogin</button>
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
