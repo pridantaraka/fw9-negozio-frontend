@@ -47,7 +47,7 @@ const AuthValid = ({errors, handleSubmit, handleChange}) => {
 function Register() {
   return (
     <>
-    <Container>
+    <Container className='all-font'>
       <Col className="m-5 p-5 text-center justify-content-center align-items-center">
         <div className="image-fluid d-flex justify-content-center gap-3">
           <img src={logo} alt="logo" />

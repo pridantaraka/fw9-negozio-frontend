@@ -1,54 +1,78 @@
 import React from 'react'
 
-import {Container, Col, Form} from 'react-bootstrap'
+import {Container, Col, Form, Button} from 'react-bootstrap'
 import logo  from '../../assets/images/Vector-logo.png'
 import {Formik} from "formik"
 import * as Yup from "yup"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
  
 const loginSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email address format').required('Required'),
-    password: Yup.string().min(8).required('Required')
+    password: Yup.string().min(4).required('Required')
   })
 
-  const AuthValid = ({errors, handleSubmit, handleChange}) => { 
+  const AuthValid = ({errors, handleSubmit, handleChange, val}) => {
+    
     return (
       <>
            
             <Form noValidate onSubmit={handleSubmit} className="mt-5 gap-2" >
                 
                 <Form.Group  className ="mb-3 mx-auto w-50" controlId="formatBasicEmail">
-                <Form.Control name="email" className="input-login" onChange={handleChange} type="email" placeholder="Email" isInvalid={!!errors.email} />
+                <Form.Control 
+                name="email" 
+                className="input-login" 
+                onChange={handleChange} 
+                type="email"
+                // value={val}
+                placeholder="Email" 
+                isInvalid={!!errors.email} />
                 <Form.Control.Feedback className="text-start" type="invalid">Invalid email format</Form.Control.Feedback>
                 </Form.Group>
                 
                 <Form.Group className="mb-3 mx-auto w-50" controlId="formatBasicPassword">
-                <Form.Control name="password" className="input-login" onChange={handleChange} type="password" placeholder="Password" isInvalid={!!errors.password} />
+                <Form.Control 
+                name="password" 
+                className="input-login" 
+                onChange={handleChange} 
+                type="password" 
+                // value={val}
+                placeholder="Password" 
+                isInvalid={!!errors.password} />
                 <Form.Control.Feedback className="text-start" type="invalid">Password must be at least 8 characters</Form.Control.Feedback>
                 </Form.Group>
-            </Form>
-        
-            <div className ="text-muted forgot-text">
+                <div className ="text-muted forgot-text">
                     <Link to="/resetpassword" className ="link-dark text-decoration-none">Forgot Password?</Link>
-            </div> 
-
-            <div>
-                <button className="btn btn-lg button-auth mx-auto w-50">Confirm</button>
-            </div>
-    
-            <div className="text-center my-5">
-                Don't have a Negozio account? Let's <Link to="/register" className="fw-bold text-decoration-none text">Register</Link>
-            </div>
-     
+                </div> 
+                <div>
+                    <Button className="btn btn-lg button-auth mx-auto w-50" type='submit'>Confirm</Button>
+                </div>
+                <div className="text-center my-5">
+                    Don't have a Negozio account? Let's <Link to="/register" className="fw-bold text-decoration-none text">Register</Link>
+                </div>
+            </Form>
       </>
     )
   }
 
 
 function Login() {
+    const navigate = useNavigate();
+
+    const onLogin = (val) => {
+          if(val.email === 'customer@mail.com' && val.password === '1234'){
+              console.log(val.email === 'customer@mail.com');
+              window.alert('Login success')
+              localStorage.setItem("auth", "randomToken");
+              navigate("/profile");
+            }else{
+              window.alert('Login Failed Password Or Email Wrong')
+            }
+      };
+
     return(
         <>
-          <Container>
+          <Container className='all-font'>
             <Col className="m-4 p-5 text-center justify-content-center align-items-center">
               <div className="m-5 p-5"> 
                   <div className="image-fluid d-flex justify-content-center gap-3">
@@ -65,7 +89,10 @@ function Login() {
                   </Link> 
                   </div>
 
-                  <Formik initialValues={{email: '', password: ''}} validationSchema={loginSchema}>
+                  <Formik 
+                  onSubmit={onLogin}
+                  initialValues={{email: '', password: ''}} 
+                  validationSchema={loginSchema}>
                       {(props) =><AuthValid {...props} />}
                   </Formik>
               </div>

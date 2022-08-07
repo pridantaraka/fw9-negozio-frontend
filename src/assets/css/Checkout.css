@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-shadow: unset !important;
+}
+
+container {
+    font-family: 'Metropolis' !important;
+    font-style: normal !important;
+}
+
+.container {
+    margin-bottom: 10vw;
+}
+
+.shipping-address .title,
+.shopping-summary .title {
+    /* font-weight: 600;
+    font-size: 16px;
+    line-height: 16px; */
+    color: #222222;
+}
+
+.shipping-address .title,
+.shopping-summary .title,
+.price,
+.shopping-summary .order,
+.delivery,
+.modal-value {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.andreas-jane p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #222222;
+}
+
+.checkout-title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 34px;
+    color: #222222;
+}
+
+.andreas-jane,
+.product-list,
+.shopping-summary {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(115, 115, 115, 0.25);
+    border-radius: 4px;
+}
+
+.courtesy {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    color: #9B9B9B;
+}
+
+.mens-cloth {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+}
+
+.price {
+    color: #222222;
+}
+
+.shopping-summary .order,
+.delivery {
+    color: #9B9B9B;
+}
+
+.btn-payment,
+.btn-choose {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 2vw !important;
+}
+
+.btn-choose {
+    color: #9B9B9B;
+    width: 38%;
+}
+
+.btn-payment {
+    color: #FFFFFF !important;
+    background: #1C3391;
+    width: 100%;
+    line-height: 20px;
+}
+
+.shopping-summary {
+    height: 16vw;
+    width: 23%;
+}
+
+.btn-choose.btn:hover {
+    color: #9B9B9B !important;
+    background-color: unset !important;
+    border-color: unset !important;
+}
+
+.btn-choose.btn-check:focus+.btn,
+.btn-choose.btn:focus {
+    color: #9B9B9B !important;
+    background-color: unset !important;
+    border-color: unset !important;
+    outline: unset !important;
+    box-shadow: unset !important;
+}
+
+.btn-payment.btn-check:focus+.btn,
+.btn-payment.btn:focus {
+    color: #FFFFFF !important;
+    background-color: #DB3022 !important;
+    border-color: unset !important;
+    outline: unset !important;
+    box-shadow: unset !important;
+}
+
+/* ini styling untuk payment */
+.shopping-summary-modal {
+    border-top: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+}
+
+.modal-payment .form-check-input:checked {
+    background: #DB3022;
+    border-color: unset !important;
+}
+
+.modal-payment-title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 22px;
+    color: #222222;
+}
+
+.mastercard-img {
+    width: 70%;
+    margin-right: 9px;
+    margin-top: -1vw;
+    margin-bottom: -0.5vw;
+}
+
+.price-modal {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    color: #DB3022;
+}
+
+.modal-payment-btn {
+    border-radius: 2vw !important;
+    width: 32%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.modal-content {
+    width: 90% !important;
+}
+
+.modal-content .btn-primary {
+    --bs-btn-color: #FFFFFF;
+    --bs-btn-bg: #DB3022;
+    --bs-btn-border-color: unset;
+    --bs-btn-hover-color: unset;
+    --bs-btn-hover-bg: unset;
+}
+
