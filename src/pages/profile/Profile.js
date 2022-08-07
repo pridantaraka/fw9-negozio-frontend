@@ -1,20 +1,21 @@
 import React from 'react'
 import {Container, Row, Col, Form, Button} from 'react-bootstrap'
 import HeaderProfile from '../../components/HeaderProfile'
-import SidebarSeller from '../../components/SidebarSeller'
+import Sidebars from '../../components/Sidebars'
 import profSide from "../../assets/images/prof-pict.png"
+import Gender from '../../components/Gender'
 
-function ProfileSeller() {
+function Profile() {
     return(
         <>
             <Container className='mw-100 main-container'>
                 <Row>
                     <HeaderProfile />
-                    <SidebarSeller />
+                    <Sidebars />
                     <Col className="p-5 m-3">
                         <div className="d-flex flex-column profile-container p-5">
                             <div className="d-flex flex-column gap-2">
-                                <span className="fw-bold fs-2">My profile store</span>
+                                <span className="fw-bold fs-2">My Profile</span>
                                 <span className="text-muted">Manage your profile information</span>
                                 <hr/>
                             </div>
@@ -22,7 +23,7 @@ function ProfileSeller() {
                            <div className='d-flex flex-row gap-5 my-3 justify-content-around'>
                            <div className='d-flex flex-column gap-5'>
                                 <div className="d-flex flex-row gap-5 mx-5">
-                                    <span className="text-muted mx-3">Store name</span>
+                                    <span className="text-muted mx-3">Name</span>
                                     <Form>
                                     <Form.Group  className ="name-form" controlId="formatBasicName">
                                         <Form.Control name="name" type="name" placeholder="Enter your name" />
@@ -49,15 +50,17 @@ function ProfileSeller() {
                                         <Form.Control.Feedback className="text-start" type="invalid">Invalid phone number format</Form.Control.Feedback>
                                         </Form.Group>
                                     </Form>
-                                </div>   
-                                
-                                <div className="d-flex flex-row gap-5 mx-5">
-                                    <span className="text-muted mx-3">Store description</span>
+                                </div>
+
+                                <div className="d-flex flex-row gap-5">
+                                    <span className="text-muted">Gender</span>
+                                    <Gender />
+                                </div>
+
+                                <div className="d-flex flex-row gap-4">
+                                    <span className="text-muted">Date of Birth</span>
                                     <Form>
-                                    <Form.Group controlId="formatBasicDescription">
-                                        <Form.Control as="textarea" rows={5} className ="desc-form text-start" name="textarea" type="textarea" placeholder="" />
-                                        <Form.Control.Feedback className="text-start" type="invalid"></Form.Control.Feedback>
-                                        </Form.Group>
+                                        <Form.Control name="date" type="date" placeholder="dd" />   
                                     </Form>
                                 </div>
                             
@@ -85,4 +88,4 @@ function ProfileSeller() {
         </>
     )
 }
-export default ProfileSeller
+export default Profile 
