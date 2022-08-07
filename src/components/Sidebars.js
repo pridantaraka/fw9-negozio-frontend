@@ -18,7 +18,7 @@ function Sidebars() {
                           <span className="py-2 fw-bold">Maman Resing</span>
                             <div className="d-flex flex-row gap-2">
                               <FiEdit2 size={18} className="pencil"/>
-                              <span className="text-muted">Edit Profile</span>
+                              <span className="text-muted">aEdit Profile</span>
                             </div>
                         </div>
                     </div>

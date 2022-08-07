@@ -44,7 +44,7 @@ function Profile() {
                                 </div>
 
                                 <div className="d-flex flex-row gap-5">
-                                    <span className="text-muted mx-1">Phone Number</span>
+                                    <span className="text-muted mx-1">aPhone Number</span>
                                     <Form>
                                     <Form.Group  className ="phone-form" controlId="formatBasicEmail">
                                         <Form.Control name="phonenumber" type="number" placeholder="Enter your phone number" />
