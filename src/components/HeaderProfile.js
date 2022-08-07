@@ -3,11 +3,12 @@ import { VscFilterFilled } from "react-icons/vsc";
 import { CgMail, CgBell, CgShoppingCart, CgProfile } from "react-icons/cg";
 
 import logo1 from '../assets/images/shopping-bag1.png'
+import '../assets/css/style.css'
 
 export default function HeaderProfile() {
     return(
         <>
-            <header className='mw-100 nav-home-height py-3 d-flex justify-content-around align-items-center'>
+            <header className='mw-100 nav-home-height py- d-flex justify-content-around align-items-center'>
                 <Nav defaultActiveKey="/home" as="ul" className='gap-3'>
                     <Nav.Item as="li" className='logo-color'>
                         <Nav.Link href="/" className='d-flex flex-row'>

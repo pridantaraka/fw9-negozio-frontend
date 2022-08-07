@@ -9,7 +9,7 @@
     background-color: #1C3391; /*logo color */
     color: #FFFFFF; /*text color */
     color: #FFFFFF; /*text color */
-
+}
 /* Auth Pages 
 (Login, Register, Forgot Password) */
 
@@ -71,5 +71,9 @@
 .nav-search-box{
     border-radius: 1rem;
     width: 560px;
+}
+.form-control {
+    display: block;
+    width: none;
 }
 /* Navigasi Home1 */

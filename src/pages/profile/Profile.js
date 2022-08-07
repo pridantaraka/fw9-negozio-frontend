@@ -1,6 +1,8 @@
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
 import HeaderProfile from '../../components/HeaderProfile'
+import SideBar from '../../components/SideBar'
+import '../../assets/css/style.css'
 
 function Profile() {
     return(
@@ -8,8 +10,9 @@ function Profile() {
             <Container className='mw-100'>
                 <Row>
                     <HeaderProfile />
+                    <SideBar />
                     <Col>
-                        <div>Hello</div>
+
                     </Col>
                 </Row>
             </Container>
