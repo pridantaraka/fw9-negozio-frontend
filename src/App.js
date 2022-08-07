@@ -16,6 +16,11 @@ import ProfileSeller from './pages/profile/ProfileSeller'
 import ShippingAddress from './pages/profile/ShippingAddress'
 import MyOrder from './pages/profile/MyOrder'
 import MyBag from './pages/profile/MyBag';
+import MyProduct from './pages/profile/MyProduct'
+import SellingProduct from './pages/profile/SellingProduct'
+import MyOrderSeller from './pages/profile/MyOrderSeller'
+import OrderCancel from './pages/profile/OrderCancel'
+
 
 function App() {
     return(
@@ -24,9 +29,14 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="/Checkout" element={<Checkout/>}/>
-            <Route path="profile" element={<ProfileSeller/>}/>
+            <Route path="profile" element={<Profile />}/>
+            <Route path="/profileseller" element={<ProfileSeller />} />
             <Route path="shippingaddress" element={<ShippingAddress />} />
             <Route path="myorder" element={<MyOrder />} />
+            <Route path="ordercancel" element={<OrderCancel />} />
+            <Route path="myorderseller" element={<MyOrderSeller />} />
+            <Route path="myproduct" element={<MyProduct />} />
+            <Route path="sellingproduct" element={<SellingProduct />} />
             <Route path="loginseller" element={<LoginSeller />} />
             <Route path="register" element={<Register />} />
             <Route path="registerseller" element={<RegisterSeller />} />
