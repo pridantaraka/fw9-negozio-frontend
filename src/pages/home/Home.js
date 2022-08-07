@@ -59,7 +59,6 @@ function Home() {
                                     Find clothes that are trending recently
                                 </p>
                             </div>
-
                             {/* <section className="card-wrapper">
                                 {/* cards component */}
                                 {/* {products.map((product, index) => (
