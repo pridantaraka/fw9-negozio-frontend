@@ -3,8 +3,8 @@ import HeaderProfile from '../../components/HeaderProfile';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import AmountItem from '../../components/AmountItem';
-
+import {AmountItem, AllPrice} from '../../components/AmountItem';
+import { useNavigate } from 'react-router-dom'
 import pic from '../../assets/images/gez-xavier-mansfield-unsplash 2.png';
 
 const Card = () => {
@@ -27,6 +27,7 @@ const Card = () => {
             <button className="border rounded-circle text-bold text-dark">+</button> */}
             {/* Amount Item */}
             <AmountItem />
+            <AllPrice />
             {/* Amount Item */}
           {/* </div> */}
           {/* <p className="fw-bold">Rp.20.000</p> */}
@@ -37,6 +38,10 @@ const Card = () => {
 };
 
 export default function MyBag() {
+  const navigate = useNavigate();
+  const Buy = () => {
+    navigate("/checkout");
+  }
   return (
     <div>
       <HeaderProfile />
@@ -68,10 +73,10 @@ export default function MyBag() {
               <p className="fw-bold">Shopping summary</p>
               <div className="d-flex justify-content-between">
                 <p>Total price</p>
-                <p className="fw-bold">Rp.20.000</p>
+                <p className="fw-bold"><AllPrice /></p>
               </div>
               <div className="d-grid">
-                <Button size="md" className="submit-btn">
+                <Button size="md" className="submit-btn" onClick={Buy}>
                   Buy
                 </Button>
               </div>

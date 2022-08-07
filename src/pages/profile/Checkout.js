@@ -12,6 +12,7 @@ import checkout2 from "../../assets/images/checkout2.png"
 import gopay from "../../assets/images/gopay.png"
 import pos from "../../assets/images/pos.png"
 import mastercard from "../../assets/images/mastercard.png"
+import { DeliverPrice, AllPrice, TotalPrice, ProductAmount } from '../../components/AmountItem';
 
 function Data(props) {
     return <span className='mens-cloth'>{props.title}</span>
@@ -60,6 +61,8 @@ function Checkout() {
                             </div>
                         </div>
                         <div>
+                            <span>Item :</span>
+                            <ProductAmount />
                             <Price price="$ 20.0" />
                         </div>
                     </div>
@@ -74,6 +77,8 @@ function Checkout() {
                             </div>
                         </div>
                         <div>
+                            {/* <DeliverPrice /> */}
+                            
                             <Price price="$ 20.0" />
                         </div>
                     </div>
@@ -83,18 +88,18 @@ function Checkout() {
                     <span className='title'>Shopping summary</span>
                     <div className='d-flex flex-row mt-md-3'>
                         <div className='order flex-fill mb-md-2'>Order</div>
-                        <div className='price'>$ 40.0</div>
+                        <div className='price'><AllPrice /></div>
                     </div>
                     <div className='d-flex flex-row'>
                         <small className='delivery flex-fill'>Delivery</small>
-                        <div className='price'>$ 5.0</div>
+                        <div className='price'><DeliverPrice /></div>
                     </div> <hr />
                     <div className='d-flex flex-row'>
                         <span className='title flex-fill'>Shopping summary</span>
-                        <div className='price'>$ 45.0</div>
+                        <div className='price'><TotalPrice /></div>
                         {/* untuk nominalnya belum dibuat dinamis */}
                     </div>
-                    <Button className="btn-payment mt-4" variant="danger" onClick={handleShow}>Select payment </Button>
+                    <Button className="btn-payment mt-4" variant='primary' onClick={handleShow}>Select payment </Button>
 
                     <Modal show={show} onHide={handleClose}>
                         <Modal.Header closeButton>
@@ -161,21 +166,21 @@ function Checkout() {
                                 <span className='modal-value'>Shopping summary</span>
                                 <div className='d-flex flex-row mt-md-3'>
                                     <div className='delivery flex-fill mb-md-2'>Order</div>
-                                    <div className='price'>$ 40.0</div>
+                                    <div className='price'><AllPrice /></div>
                                 </div>
                                 <div className='d-flex flex-row'>
                                     <small className='delivery flex-fill'>Delivery</small>
-                                    <div className='price'>$ 5.0</div>
+                                    <div className='price'><DeliverPrice /></div>
                                 </div>
                             </div>
                         </div>
                         <Modal.Footer className="mb-md-3 mt-md-5">
                             <div className=' flex-fill'>
                                 <span className='modal-value flex-fill'>Shopping summary</span>
-                                <div className='price-modal '>$ 45.0</div>
+                                <div className='price-modal '><TotalPrice /></div>
                                     {/* untuk nominalnya belum dibuat dinamis */}
                             </div>
-                            <Button className="modal-payment-btn" onClick={handleClose}>
+                            <Button className="modal-payment-btn" variant='primary' onClick={handleClose}>
                                 Buy
                             </Button>
                         </Modal.Footer>
