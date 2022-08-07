@@ -2,6 +2,7 @@ import React from 'react'
 import {Container, Row, Col, Form, Button} from 'react-bootstrap'
 import Gender from '../../components/Gender'
 import HeaderProfile from '../../components/HeaderProfile'
+import SideBar from '../../components/SideBar'
 import Sidebars from '../../components/Sidebars'
 import profSide from "../../assets/images/prof-pict.png"
 
@@ -76,12 +77,7 @@ function Profile() {
                                 <Button variant="outline-secondary" className='button-image'>Select Image</Button>
                             </div>
                         </div> 
-                            
-                                
                     </div>
-                      
-                       
-                      
                     </Col>
                 </Row>
             </Container>

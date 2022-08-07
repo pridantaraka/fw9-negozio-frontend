@@ -88,6 +88,13 @@
     border-radius: 1rem;
     width: 560px;
 }
+
+.form-control {
+    display: block;
+    width: none;
+}
+/* Navigasi Home1 */
+
 /* Navigasi Home1 */
 
 /* Side Bars */
