@@ -27,7 +27,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="login" element={<Login />} />
-                <Route path="Checkout" element={<Checkout/>}/>
+                <Route path="checkout" element={<Checkout/>}/>
                 <Route path="profile" element={
                 <PrivateRoute>
                     <Profile/>
@@ -39,8 +39,8 @@ function App() {
                 <Route path="registerseller" element={<RegisterSeller />} />
                 <Route path="resetpassword" element={<ResetPassword />} />
                 <Route path="confirmresetpassword" element={<ConfirmResetPassword />} />
-                <Route path="Category" element={<Category />} />
-                <Route path="ProductsDetail" element={<ProductsDetail />} />
+                <Route path="category" element={<Category />} />
+                <Route path="productdetail" element={<ProductsDetail />} />
                 <Route path="mybag" element={<MyBag />} />
             </Routes>
         </BrowserRouter>

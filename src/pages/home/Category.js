@@ -1,16 +1,18 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Container,Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import CategoryParts from '../../components/CategoryParts'
+import HeaderProfile from '../../components/HeaderProfile'
 
 function Category () {
   return (
-    <Container>
+    <Container className='mw-100'>
+      <Row>
+      <HeaderProfile />
         <nav Style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol className="breadcrumb mt-4">
           <li className="breadcrumb-item active" aria-current="page"><Link to="/">Home</Link></li>
           <li className="breadcrumb-item active" aria-current="page"><Link to="/Category">Category</Link></li>
-          <li className="breadcrumb-item active" aria-current="page">T-Shirt</li>
         </ol>
       </nav>
 
@@ -31,6 +33,7 @@ function Category () {
         <CategoryParts />
         <CategoryParts />
       </div>
+      </Row>
     </Container>
   )
 }
