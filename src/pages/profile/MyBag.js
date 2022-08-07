@@ -3,6 +3,7 @@ import HeaderProfile from '../../components/HeaderProfile';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import AmountItem from '../../components/AmountItem';
 
 import pic from '../../assets/images/gez-xavier-mansfield-unsplash 2.png';
 
@@ -20,12 +21,15 @@ const Card = () => {
         </div>
 
         <div className="d-flex  align-items-center justify-content-between gap-3 mt-5 mt-lg-0">
-          <div className="d-flex gap-2 align-items-center">
-            <button className="bg-secondary rounded-circle fw-bold text-light">-</button>
+          {/* <div className="d-flex gap-2 align-items-center"> */}
+            {/* <button className="bg-secondary rounded-circle fw-bold text-light">-</button>
             <p>1</p>
-            <button className="border rounded-circle text-bold text-dark">+</button>
-          </div>
-          <p className="fw-bold">Rp.20.000</p>
+            <button className="border rounded-circle text-bold text-dark">+</button> */}
+            {/* Amount Item */}
+            <AmountItem />
+            {/* Amount Item */}
+          {/* </div> */}
+          {/* <p className="fw-bold">Rp.20.000</p> */}
         </div>
       </div>
     </div>
