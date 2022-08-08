@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Container, Row, Col, Form, Button} from 'react-bootstrap'
 import Gender from '../../components/Gender'
 import HeaderProfile from '../../components/HeaderProfile'
 import Sidebars from '../../components/Sidebars'
 import profSide from "../../assets/images/prof-pict.png"
+import { getUsers } from '../../redux/asyncAction/users'
+import { useDispatch, useSelector } from 'react-redux'
+import ProfileSeller from './ProfileSeller'
 
 function Profile(){
-    const role = "customer"
-    const profile ={role:role}
+    
+
+    const profile = useSelector((state) =>state.users.result)
+    const token = useSelector((state)=>state.auth.token)
+    const dispatch = useDispatch()
+
+    React.useEffect(()=>{
+        dispatch(getUsers(token))
+    },[dispatch, token])
+    console.log(profile);
     return(
         <>
         {profile.role === "customer"?
@@ -83,7 +94,7 @@ function Profile(){
                 </Col>
             </Row>
         </Container>    
-        :<h1>Ini ProfileSeller</h1>}
+         : <ProfileSeller />}
             
         </>
     )

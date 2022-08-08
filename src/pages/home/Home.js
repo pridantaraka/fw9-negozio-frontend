@@ -1,6 +1,7 @@
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
 import HeaderHome from '../../components/HeaderHome'
+import HeaderProfile from '../../components/HeaderProfile'
 import Trending from '../../components/module/HomeTrending/Slider'
 import Category from '../../components/module/Category/index'
 import Cards from '../../components/module/Cards'
@@ -13,8 +14,7 @@ function Home() {
         <>
             <Container className='mw-100'>
                 <Row>
-                    <HeaderHome />
-
+                    <HeaderProfile />
                     <section className="slider d-flex flex-column">
                         <Trending />
 

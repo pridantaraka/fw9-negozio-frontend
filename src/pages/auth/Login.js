@@ -77,6 +77,7 @@ function Login() {
 
     const onLogin = (value) => {
         const data = { email: value.email, password: value.password };
+        console.log(data);
         dispatch(login(data));
       };
     
