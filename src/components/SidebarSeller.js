@@ -25,32 +25,54 @@ function SidebarSeller() {
             </div>
 
             <div className="side-child-wrap my-5">
-                  <Link to="" className="text-decoration-none text-muted">
+                  
                     <div className="d-flex flex-row gap-3 mt-3">
                       <div className="icon-wrap text-center">
                           <FiHome size={18} className="icon-sidebar" />                          
                       </div>
-                          <span>Store</span>
+                          <div className='d-flex flex-column gap-2'>
+                            <span className='fw-bold'>Store</span>
+                            <Link to="/profileseller" className='text-decoration-none text-muted'>
+                              <span>Store profile</span>
+                            </Link> 
+                          </div>
+                          
                       </div>                    
-                  </Link>
+                  
 
-                  <Link to="" className="text-decoration-none text-muted">
+                  
                     <div className="d-flex flex-row gap-3 mt-3">
                       <div className="icon-wrap-one text-center">
                         <FiBox size={18} className="icon-sidebar" />
                       </div>
-                      <span>Product</span>
-                    </div>
-                  </Link>
+                       <div className='d-flex flex-column gap-2'>
+                          <span className='fw-bold'>Product</span>
+                          <Link to="/myproduct" className='text-decoration-none text-muted'>
+                            <span>My products</span>
+                          </Link>
+                          <Link to="/sellingproduct" className='text-decoration-none text-muted'>
+                            <span>Selling products</span>
+                          </Link> 
+                       </div>
+                       </div>
+                  
 
-                  <Link to="" className="text-decoration-none text-muted">
+                  
                     <div className="d-flex flex-row gap-3 mt-3">
                       <div className="icon-wrap-two text-center">
                         <FiShoppingCart size={18} className="icon-sidebar" />
                       </div>
-                      <span>Order</span>
+                        <div className='d-flex flex-column gap-2'>
+                          <span className='fw-bold'>Order</span>
+                          <Link to="/myorderseller" className='text-decoration-none text-muted'>
+                            <span>My order</span>
+                          </Link>
+                          <Link to="/ordercancel" className='text-decoration-none text-muted'>
+                            <span>Order cancel</span>
+                          </Link>
+                        </div>
                     </div>
-                  </Link>
+                  
 
             </div>
           
