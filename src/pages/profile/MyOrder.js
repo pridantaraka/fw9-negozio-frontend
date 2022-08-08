@@ -3,7 +3,6 @@ import {Container, Row, Col} from 'react-bootstrap'
 import HeaderProfile from '../../components/HeaderProfile'
 import Sidebars from '../../components/Sidebars'
 
-
 function MyOrder() {
   return(
       <>
