@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Modal, Button } from "react-bootstrap";
 import ModalAddress from "./ModalAddress";
-
+import {Link} from 'react-router-dom'
 
 function ModalAddressSelect() {
   const [show, setShow] = useState(false);
@@ -21,9 +21,9 @@ function ModalAddressSelect() {
         <ModalAddress />
           <div className='p-5 m-3 address'>
               <div className='d-flex flex-column gap-2'>
-                <span>Andreas Jane</span>
+                <span className="andreas-modal">Andreas Jane</span>
                 <span>Perumahan Sapphire Mediterania, Wiradadi, Kec. Sokaraja, Kabupaten Banyumas, Jawa Tengah, 53181 [Tokopedia Note: blok c 16] Sokaraja, Kab. Banyumas, 53181</span>
-                <span className='fw-bold fs-5 mt-3'>Change address</span>
+                <Link to="/" className='change-address fs-5 mt-3'>Change address</Link>
               </div>                           
           </div>                          
         </Modal.Body>

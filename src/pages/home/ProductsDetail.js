@@ -14,10 +14,10 @@ import mg1 from '../../assets/images/Mask Group 1.png'
 import mg2 from '../../assets/images/Mask Group 2.png'
 import mg3 from '../../assets/images/Mask Group 3.png'
 import mg4 from '../../assets/images/Mask Group 4.png'
-import elipse5 from '../../assets/images/Ellipse 5.png'
-import elipse6 from '../../assets/images/Ellipse 6.png'
-import elipse7 from '../../assets/images/Ellipse 7.png'
-import elipse8 from '../../assets/images/Ellipse 8.png'
+// import elipse5 from '../../assets/images/Ellipse 5.png'
+// import elipse6 from '../../assets/images/Ellipse 6.png'
+// import elipse7 from '../../assets/images/Ellipse 7.png'
+// import elipse8 from '../../assets/images/Ellipse 8.png'
 import line48 from '../../assets/images/Line 48.png'
 import { Row } from 'react-bootstrap';
 import HeaderHome from '../../components/HeaderHome';
@@ -36,7 +36,7 @@ function ProductDetail() {
         </ol>
       </nav>
       <main className='d-flex'>
-          <div>
+          <div className='main-img-group'>
             <div className='main-img'>
               <img src={main} alt='Mask group'/>
             </div>
@@ -61,11 +61,15 @@ function ProductDetail() {
             </div>
             <div>
               <span className='color'>Color</span>
-              <div className='d-flex gap-2 mt-2 mb-5'>
-                <img src={elipse5} alt='elipse' />
+              <div className='d-flex gap-2 mt-2 mb-4 color-choice'>
+                {/* <img src={elipse5} alt='elipse' />
                 <img src={elipse6} alt='elipse' />
                 <img src={elipse7} alt='elipse' />
-                <img src={elipse8} alt='elipse' />
+                <img src={elipse8} alt='elipse' /> */}
+                <Button className='black-choice'></Button>
+                <Button className='red-choice'></Button>
+                <Button className='blue-choice'></Button>
+                <Button className='green-choice'></Button>
               </div>
             </div>
             <div className='size-jumlah d-flex gap-5'>
@@ -119,10 +123,10 @@ function ProductDetail() {
         <div>Informasi Produk</div>
         <div className='mb-4 mt-4'>
           <span className='condition'>Condition</span> <br/>  
-          <span className='new'>New</span>
+          <span className='new-pd'>New</span>
         </div>
       </div>
-      <div>
+      <div className='desc-group'>
         <span className='desc-tittle'>Description</span>
         <p className='desc-text'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /><br />
@@ -137,8 +141,8 @@ function ProductDetail() {
       </div>
 
       <div className='d-flex flex-row'>
-        <div>
-          <h5 classNanme='review-p'>Product review</h5>
+        <div className='product-reiew'>
+          <div classNanme='review-p'>Product review</div>
           <div>
             <div>
               <h2 className='rating-pd'>5.0 <span className='per10'>/10</span></h2>
@@ -167,18 +171,18 @@ function ProductDetail() {
           </div>
         </div>
       </div> <hr className='mt-5 mb-5'/>
-      <div>
+      <div className='you-can-group'>
         <h2 className='like-this'>You can also like this</h2>
         <small className='never-seen'>You`ve never seen it before!</small>
       </div>
-      <div className='d-flex flex-row gap-4 mb-5 mt-4'>
+      <div className='d-flex flex-row gap-4 mb-5 mt-4 justify-content-center'>
         <DataProductDetail />
         <DataProductDetail />
         <DataProductDetail />
         <DataProductDetail />
         <DataProductDetail />
       </div>
-      <div className='d-flex flex-row gap-4'>
+      <div className='d-flex flex-row gap-4 justify-content-center'>
         <DataProductDetail />
         <DataProductDetail />
         <DataProductDetail />

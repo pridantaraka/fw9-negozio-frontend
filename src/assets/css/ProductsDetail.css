@@ -7,7 +7,9 @@
     margin-left: -17vw;
 }
 
-.right-main .baju, .description-pd, .review-pd {
+.right-main .baju,
+.description-pd,
+.review-pd {
     font-style: normal;
     font-family: 'Metropolis';
     font-weight: 600;
@@ -28,7 +30,16 @@
     text-decoration: none;
 }
 
-.star, .star2 {
+.main-img-group,
+.description-pd,
+.desc-group,
+.product-reiew,
+.you-can-group {
+    margin-left: 4.5vw;
+}
+
+.star,
+.star2 {
     color: #FFBA49;
 }
 
@@ -60,6 +71,28 @@
     color: #222222;
 }
 
+.color-choice button {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 2vw;
+}
+
+.color-choice .black-choice {
+    background: #1A1A1A;
+}
+
+.color-choice .red-choice {
+    background: #D84242;
+}
+
+.color-choice .blue-choice {
+    background: #4290D8;
+}
+
+.color-choice .green-choice {
+    background: #42D86C;
+}
+
 .pd-button .chat-bag {
     font-family: 'Metropolis';
     font-style: normal;
@@ -87,6 +120,11 @@
 
 .btn-minus {
     height: 35px;
+    line-height: 1vw;
+}
+
+.btn-primary {
+    --bs-btn-hover-bg: #fdffc2 !important;
 }
 
 .counter-poin {
@@ -98,7 +136,8 @@
     color: #222222;
 }
 
-.condition, .desc-tittle {
+.condition,
+.desc-tittle {
     font-family: 'Metropolis';
     font-style: normal;
     font-weight: 600;
@@ -107,18 +146,19 @@
     color: #222222;
 }
 
-.size-button-detail{
+.size-button-detail {
     height: 36px;
     width: 36px;
     color: #FFFFFF;
     background-color: #1C3391;
 }
-.size-button-detail:hover{
+
+.size-button-detail:hover {
     background: #FFFFFF;
     color: #1C3391;
 }
 
-.new {
+.new-pd {
     font-family: 'Metropolis';
     font-style: normal;
     font-weight: 500;

@@ -1,27 +1,22 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import HeaderProfile from "../../components/HeaderProfile";
 
 function Chat() {
     return (
         <>
             <Container className="mw-100">
-                <Row>
-                    <HeaderProfile />
-                    <Container className="mx-5 gap-3">
-                    <Col md={3} className="">
-                        <div>
+                <HeaderProfile />
+                <div className="d-flex flex-row mt-md-5 justify-content-center">
+                    <div className="d-flex flex-column me-md-5" style={{background: "#FFFFFF", border: "3px solid #8E8E93", width: "15vw", fontWeight: "600"}}>
+                        <span className="ms-md-3 mt-md-3">Chat</span> <hr style={{opacity: "1"}}/>
+                        <span className="ms-md-3 mt-md-2 text-center" style={{paddingTop: "9vw", paddingBottom: "11vw"}}>Belum ada chat</span>
+                    </div>
+                    <div className="d-flex flex-column" style={{background: "#FFFFFF", border: "3px solid #8E8E93", width: "45vw", fontWeight: "600"}}>
+                        <span className="ms-md-3 mt-md-3">Account Name</span> <hr style={{opacity: "1"}} />
+                        <span></span>
+                    </div>
+                </div>
 
-
-                        </div>
-                    </Col>
-                    <Col md={9} className="">
-                        <div>
-
-                            
-                        </div>
-                    </Col>
-                    </Container>
-                </Row>
             </Container>
         </>
     )

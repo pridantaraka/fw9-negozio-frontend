@@ -1,11 +1,11 @@
 import React from 'react'
-import {Container, Row, Col} from 'react-bootstrap'
+import {Container, Row} from 'react-bootstrap'
 import HeaderHome from '../../components/HeaderHome'
 import HeaderProfile from '../../components/HeaderProfile'
 import Trending from '../../components/module/HomeTrending/Slider'
 import Category from '../../components/module/Category/index'
-import Cards from '../../components/module/Cards'
-
+// import Cards from '../../components/module/Cards'
+import CategoryParts from '../../components/CategoryParts'
 
 import './Home.css'
 
@@ -31,25 +31,34 @@ function Home() {
                         </div>
                     </section>
 
-                    <section className="display-products d-flex flex-column ">
+                    <section className="display-products d-flex flex-column">
                         <div className="new-products">
-                            <div className="new">
-                                <h1 className="new-title">New</h1>
-                                <p className="new-text mt-3">You've never seen it before!</p>
+                            <div className="new mt-md-5">
+                                <div className="new-title">New</div>
+                                <p className="new-text mt-md-2">You've never seen it before!</p>
                             </div>
 
-                            {/* <section className="card-wrapper">
-                                {/* cards component */}
-                                    {/* {products.map((product, index) => (
-                                        <Cards
-                                            productName={product.Name}
-                                            productPrice={product.price}
-                                            storeName={product.namestore}
-                                            productPhoto={product.photo1}
-                                            onClick={() => navigate(`/main/page-product/${product.id}`)}
-                                        /> */}
-                                    {/* ))} */}
-                            {/* </section> */} 
+                            <div className='d-flex flex-row gap-4 mb-md-5 mt-md-4 justify-content-center'>
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                            </div>
+                            <div className='d-flex flex-row gap-4 mb-md-5 justify-content-center'>
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                            </div>
+                            <div className='d-flex flex-row gap-4 mb-md-5 justify-content-center'>
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                            </div>
                         </div>
 
                         <div className="popular-products">
@@ -59,18 +68,27 @@ function Home() {
                                     Find clothes that are trending recently
                                 </p>
                             </div>
-                            {/* <section className="card-wrapper">
-                                {/* cards component */}
-                                {/* {products.map((product, index) => (
-                                <Cards
-                                    productName={product.Name}
-                                    productPrice={product.price}
-                                    storeName={product.namestore}
-                                    productPhoto={product.photo3}
-                                    onClick={() => navigate(`/main/page-product/${products.id}`)}
-                                />
-                                ))} */}
-                            {/* </section> */} 
+                            <div className='d-flex flex-row gap-4 mb-md-5 mt-md-4 justify-content-center'>
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                            </div>
+                            <div className='d-flex flex-row gap-4 mb-md-5 justify-content-center'>
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                            </div>
+                            <div className='d-flex flex-row gap-4 mb-md-5 justify-content-center'>
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                                <CategoryParts />
+                            </div>
                         </div>
                     </section>
                 </Row>
