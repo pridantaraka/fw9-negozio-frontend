@@ -19,10 +19,10 @@ function ProfileSeller() {
                                 <hr/>
                             </div>
                             
-                           <div className='d-flex flex-row gap-5 my-3 justify-content-around'>
+                           <div className='d-flex flex-row gap-5 my-3'>
                            <div className='d-flex flex-column gap-5'>
-                                <div className="d-flex flex-row gap-5 mx-5">
-                                    <span className="text-muted mx-3">Store name</span>
+                                <div className="d-flex flex-row gap-5 justify-content-between">
+                                    <span className="text-muted ms-3">Store name</span>
                                     <Form>
                                     <Form.Group  className ="name-form" controlId="formatBasicName">
                                         <Form.Control name="name" type="name" placeholder="Enter your name" />
@@ -31,8 +31,8 @@ function ProfileSeller() {
                                     </Form>
                                 </div>
 
-                                <div className="d-flex flex-row gap-5 mx-5">
-                                    <span className="text-muted mx-3">Email</span>
+                                <div className="d-flex flex-row gap-5 justify-content-between">
+                                    <span className="text-muted ms-3">Email</span>
                                     <Form>
                                     <Form.Group  className ="email-form" controlId="formatBasicEmail">
                                         <Form.Control name="email" type="email" placeholder="Enter your email" />
@@ -41,8 +41,8 @@ function ProfileSeller() {
                                     </Form>
                                 </div>
 
-                                <div className="d-flex flex-row gap-5">
-                                    <span className="text-muted mx-1">Phone Number</span>
+                                <div className="d-flex flex-row gap-5 justify-content-between">
+                                    <span className="text-muted ms-3">Phone Number</span>
                                     <Form>
                                     <Form.Group  className ="phone-form" controlId="formatBasicEmail">
                                         <Form.Control name="phonenumber" type="number" placeholder="Enter your phone number" />
@@ -51,8 +51,8 @@ function ProfileSeller() {
                                     </Form>
                                 </div>   
                                 
-                                <div className="d-flex flex-row gap-5 mx-5">
-                                    <span className="text-muted mx-3">Store description</span>
+                                <div className="d-flex flex-row gap-5 justify-content-between">
+                                    <span className="text-muted ms-3">Store description</span>
                                     <Form>
                                     <Form.Group controlId="formatBasicDescription">
                                         <Form.Control as="textarea" rows={5} className ="desc-form text-start" name="textarea" type="textarea" placeholder="" />

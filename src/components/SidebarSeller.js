@@ -1,18 +1,20 @@
 import React from 'react';
 import { Col } from "react-bootstrap";
 import { FiEdit2, FiBox, FiShoppingCart, FiHome } from "react-icons/fi"
+import { useSelector } from 'react-redux';
 import {Link} from "react-router-dom"
 import profSide from "../assets/images/sidebar.png" 
 
 
 function SidebarSeller() {
+  const users = useSelector((state) => state.users.result);
   return (
   <>
   <Col className="col-md-3 d-flex flex-column sidebar-wrap side-height h-100">
             <div className="d-flex flex-column">
                   <Link to="" className="text-decoration-none text-muted">
                     <div className="d-flex flex-row gap-3">
-                        <img src={profSide} alt="profile-sidebar" className="img-fluid sidebar-prof"></img>
+                        <img src={`http://${users.profile_picture}`} alt="profile-sidebar" className="img-fluid sidebar-prof"></img>
                         <div className="d-flex flex-column">
                           <span className="py-2 fw-bold">Maman Resing</span>
                             <div className="d-flex flex-row gap-2">
