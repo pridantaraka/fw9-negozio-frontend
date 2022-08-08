@@ -24,10 +24,6 @@ React.useEffect(() => {
     dispatch(getUsers(token));
   }, [dispatch, token]);
 console.log(users);
-// const onLogout = () => {
-//         localStorage.removeItem("auth");
-//         navigate("/login");
-//     };
   return (
     <>
     <Col className="col-md-3 d-flex flex-column sidebar-wrap side-height h-100">

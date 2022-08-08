@@ -53,7 +53,7 @@ export default function HeaderProfile() {
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
-                        <Nav.Link eventKey="link-1">
+                        <Nav.Link eventKey="link-1" href="/chat">
                             <div className='align-self-center logo-color'><CgMail size={24} /></div>
                         </Nav.Link>
                     </Nav.Item>

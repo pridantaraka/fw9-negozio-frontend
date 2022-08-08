@@ -25,16 +25,15 @@ const resetSchema = Yup.object().shape({
                 <Form.Control name="password" onChange={handleChange} type="password" placeholder="Confirmation New Password" isInvalid={!!errors.password} />
                 <Form.Control.Feedback className="text-start" type="invalid">Password does not match</Form.Control.Feedback>
                 </Form.Group>
-            </Form>
-        
-            <div className ="text-muted forgot-text">
+                <div className ="text-muted forgot-text">
                     <Link to="/resetpassword" className ="link-dark text-decoration-none">Forgot Password?</Link>
-            </div> 
-
-            <div>
-                <button className="btn btn-lg button-auth mx-auto w-50">Confirm</button>
-            </div>
-     
+                </div> 
+                <div>
+                  <Link to='/login'>
+                    <button className="btn btn-lg button-auth mx-auto w-50">Confirm</button>
+                    </Link>
+                </div>
+            </Form>
       </>
     )
   }
