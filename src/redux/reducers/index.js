@@ -1,8 +1,10 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import amountitem from "./amountitem";
+import auth from "./auth";
 
 const reducer = combineReducers({
-    amountitem
+    amountitem,
+    auth
 });
 
 export default reducer;
