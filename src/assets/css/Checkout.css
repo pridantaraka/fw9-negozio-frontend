@@ -32,12 +32,12 @@ container {
     line-height: 16px;
 }
 
-.andreas-jane p {
+/* .andreas-jane p {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: #222222;
-}
+} */
 
 .checkout-title {
     font-weight: 700;
@@ -46,11 +46,11 @@ container {
     color: #222222;
 }
 
-.andreas-jane,
+/* .andreas-jane, */
 .product-list,
 .shopping-summary {
     background: #FFFFFF;
-    box-shadow: 0px 0px 8px rgba(115, 115, 115, 0.25);
+    box-shadow: 0px 0px 8px rgba(115, 115, 115, 0.25) !important;
     border-radius: 4px;
 }
 
@@ -77,12 +77,18 @@ container {
     color: #9B9B9B;
 }
 
-.btn-payment,
-.btn-choose {
+.btn-payment {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     border-radius: 2vw !important;
+}
+
+.btn-choose {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 28px;
+    color: #222222;
 }
 
 .btn-choose {
@@ -98,7 +104,7 @@ container {
 }
 
 .shopping-summary {
-    height: 16vw;
+    height: 18.5vw;
     width: 23%;
 }
 
@@ -166,7 +172,7 @@ container {
 }
 
 .modal-content {
-    width: 90% !important;
+    width: 98% !important;
 }
 
 .modal-content .btn-primary {
@@ -175,5 +181,29 @@ container {
     --bs-btn-border-color: unset;
     --bs-btn-hover-color: unset;
     --bs-btn-hover-bg: unset;
+}
+
+.andreas-modal {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #222222;
+}
+
+.change-address {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #DB3022;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover, .btn:hover, .btn-check:focus+.btn, .btn:focus {
+    background-color: unset !important;
+    border-color: unset !important;
+    color: unset !important;
 }
 

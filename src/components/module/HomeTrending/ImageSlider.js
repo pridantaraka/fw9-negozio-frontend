@@ -5,7 +5,7 @@ import fourthImg from '../../../assets/images/dooley.jpeg'
 
 const ImageSlider = [
     {
-        title:"Trens in 2020",
+        title:"Trends in 2022",
         urls:firstImg
     },
     {

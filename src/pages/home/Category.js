@@ -10,29 +10,29 @@ function Category () {
       <Row>
       <HeaderProfile />
         <nav Style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol className="breadcrumb mt-4">
-          <li className="breadcrumb-item active" aria-current="page"><Link to="/">Home</Link></li>
-          <li className="breadcrumb-item active" aria-current="page"><Link to="/Category">Category</Link></li>
-        </ol>
-      </nav>
+          <ol className="breadcrumb mt-4">
+            <li className="breadcrumb-item active" aria-current="page"><Link to="/">Home</Link></li>
+            <li className="breadcrumb-item active" aria-current="page"><Link to="/Category">Category</Link></li>
+          </ol>
+        </nav>
 
-      <div>
-        <h2 className='tshirt'>T-Shirt</h2>
-      </div>
-      <div className='d-flex flex-row gap-4 mb-md-5 mt-md-4'>
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-      </div>
-      <div className='d-flex flex-row gap-4 mb-md-5'>
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-      </div>
+        <div>
+          <h2 className='tshirt'>T-Shirt</h2>
+        </div>
+        <div className='d-flex flex-row gap-4 mb-md-5 mt-md-4 justify-content-center'>
+          <CategoryParts />
+          <CategoryParts />
+          <CategoryParts />
+          <CategoryParts />
+          <CategoryParts />
+        </div>
+        <div className='d-flex flex-row gap-4 mb-md-5 justify-content-center'>
+          <CategoryParts />
+          <CategoryParts />
+          <CategoryParts />
+          <CategoryParts />
+          <CategoryParts />
+        </div>
       </Row>
     </Container>
   )

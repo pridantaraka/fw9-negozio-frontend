@@ -20,8 +20,8 @@ import MyProduct from './pages/profile/MyProduct'
 import SellingProduct from './pages/profile/SellingProduct'
 import MyOrderSeller from './pages/profile/MyOrderSeller'
 import OrderCancel from './pages/profile/OrderCancel'
-
 import PrivateRoute from "./components/PrivateRoute";
+import Chat from "./pages/profile/Chat";
 
 
 function App() {
@@ -53,6 +53,7 @@ function App() {
                 <Route path="category" element={<Category />} />
                 <Route path="productdetail" element={<ProductsDetail />} />
                 <Route path="mybag" element={<MyBag />} />
+                <Route path="chat" element={<Chat />} />
             </Routes>
         </BrowserRouter>
         </>
