@@ -59,18 +59,6 @@ const loginSchema = Yup.object().shape({
 
 
 function Login() {
-    // const navigate = useNavigate();
-
-    // const onLogin = (val) => {
-    //       if(val.email === 'customer@mail.com' && val.password === '1234'){
-    //           console.log(val.email === 'customer@mail.com');
-    //           window.alert('Login success')
-    //           localStorage.setItem("auth", "randomToken");
-    //           navigate("/profile");
-    //         }else{
-    //           window.alert('Login Failed Password Or Email Wrong')
-    //         }
-    //   };
     const dispatch = useDispatch();
     const token = useSelector((state) => state.auth.token);
     const navigate = useNavigate();

@@ -19,10 +19,7 @@ const resetSchema = Yup.object().shape({
                 <Form.Control name="email" className="input-login" onChange={handleChange} type="email" placeholder="Email" isInvalid={!!errors.email} />
                 <Form.Control.Feedback className="text-start" type="invalid">Invalid email format</Form.Control.Feedback>
                 </Form.Group>
-                
-            </Form>
-        
-            <div className ="text-muted forgot-text">
+                <div className ="text-muted forgot-text">
                     <Link to="" className ="link-dark text-decoration-none">Forgot Password?</Link>
             </div> 
 
@@ -34,7 +31,7 @@ const resetSchema = Yup.object().shape({
             <div className="text-center my-5">
                 Don't have a Negozio account? Let's <Link to="/login" className="fw-bold text-decoration-none text">Register</Link>
             </div>
-     
+            </Form>
       </>
     )
   }

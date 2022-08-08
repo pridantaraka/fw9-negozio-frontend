@@ -4,13 +4,15 @@ import logo  from '../../assets/images/Vector-logo.png'
 import {Formik} from "formik"
 import * as Yup from "yup"
 import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { login } from '../../redux/asyncAction/auth'
  
 const loginSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email address format').required('Required'),
     password: Yup.string().min(4).required('Required')
   })
 
-  const AuthValid = ({errors, handleSubmit, handleChange}) => { 
+  const AuthValid = ({errors, handleSubmit, handleChange, values}) => { 
     return (
       <>
            
@@ -22,7 +24,8 @@ const loginSchema = Yup.object().shape({
                 className="input-login" 
                 onChange={handleChange} 
                 type="email" 
-                placeholder="Email" 
+                placeholder="Email"
+                value={values.email}
                 isInvalid={!!errors.email} />
                 <Form.Control.Feedback className="text-start" type="invalid">Invalid email format</Form.Control.Feedback>
                 </Form.Group>
@@ -34,6 +37,7 @@ const loginSchema = Yup.object().shape({
                 onChange={handleChange} 
                 type="password" 
                 placeholder="Password" 
+                value={values.password}
                 isInvalid={!!errors.password} />
                 <Form.Control.Feedback className="text-start" type="invalid">Password must be at least 8 characters</Form.Control.Feedback>
                 </Form.Group>
@@ -52,18 +56,22 @@ const loginSchema = Yup.object().shape({
   }
 
 function LoginSeller() {
-    const navigate = useNavigate();
-  
-      const onLogin = (val) => {
-        if(val.email === 'seller@mail.com' && val.password === '1234'){
-            console.log(val.email === 'customer@mail.com');
-            window.alert('Login success')
-            localStorage.setItem("auth", "randomToken");
-            navigate("/profile");
-          }else{
-            window.alert('Login Failed')
-          }
+  const dispatch = useDispatch();
+  const token = useSelector((state) => state.auth.token);
+  const navigate = useNavigate();
+
+  const onLogin = (value) => {
+      const data = { email: value.email, password: value.password };
+      console.log(data);
+      dispatch(login(data));
     };
+  
+    React.useEffect(() => {
+        if (token) {
+          navigate("/profile");
+        }
+     
+    }, [navigate, token]);
     return(
         <>
     <Container className='all-font'>

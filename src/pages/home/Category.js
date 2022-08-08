@@ -13,6 +13,7 @@ function Category () {
           <ol className="breadcrumb mt-4">
             <li className="breadcrumb-item active" aria-current="page"><Link to="/">Home</Link></li>
             <li className="breadcrumb-item active" aria-current="page"><Link to="/Category">Category</Link></li>
+            <li className="breadcrumb-item active" aria-current="page">T-Shirt</li>
           </ol>
         </nav>
 

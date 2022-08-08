@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getUsers } from "../asyncAction/users";
+import { getUsers, updateUsers } from "../asyncAction/users";
 
 const initialState ={
     result:{}
@@ -13,6 +13,10 @@ export const users = createSlice({
         build.addCase(getUsers.fulfilled, (state, action)=>{
             state.result = action.payload?.results;
         })
+        build.addCase(updateUsers.fulfilled, (state, action)=>{
+            state.result = action.payload?.results;
+            state.successMsg = action.payload?.results.message;
+        });
     }
 })
 
