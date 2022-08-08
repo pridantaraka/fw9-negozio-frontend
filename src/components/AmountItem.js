@@ -1,6 +1,7 @@
 import React from "react";
 import { Button} from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
+import '../assets/css/ProductsDetail.css';
 
 import {
   increment,
@@ -14,7 +15,7 @@ export const AmountItem = () => {
   return (
     <>
     <div className="d-flex gap-2 align-items-center">
-       <Button className="bg-secondary rounded-circle fw-bold text-light" disabled={count<1} onClick={() => dispatch(decrement())}>-</Button>
+       <Button className="bg-secondary rounded-circle fw-bold text-light btn-minus" disabled={count<1} onClick={() => dispatch(decrement())}>-</Button>
        <p className='mx-2 counter-poin mb-0'>{count}</p>
        <Button className="border rounded-circle text-bold text-dark" disabled={count===10} onClick={() => dispatch(increment())}>+</Button>
     </div>

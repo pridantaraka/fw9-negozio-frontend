@@ -45,10 +45,11 @@
     cursor: pointer;
     z-index: 100;
     position: absolute;
-    top: 35%;
-    width: auto;
+    /* top: 35%; */
+    /* width: auto; */
     padding: 1rem;
-    margin-top: -3rem;
+    /* margin-top: -3rem; */
+    margin-top: -11vw;
     font-size: 30px;
     border-radius: 60%;
     color: #9b9b9b;
