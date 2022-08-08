@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const http = (token) => {
   const headers = {};
@@ -7,7 +7,7 @@ const http = (token) => {
   }
   return axios.create({
     headers,
-    baseURL: process.env.REACT_APP_NEGOZIO_URL
+    baseURL: process.env.REACT_APP_NEGOZIO_URL,
   });
 };
 
