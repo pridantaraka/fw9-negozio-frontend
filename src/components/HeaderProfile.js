@@ -2,11 +2,11 @@ import React from 'react';
 import { Nav, Form } from 'react-bootstrap'
 import { VscFilterFilled } from "react-icons/vsc";
 import { CgMail, CgBell, CgShoppingCart, CgProfile } from "react-icons/cg";
-import ModalFilter from './ModalFilter';
-import DropDownProfile from './DropDownProfile';
 import logo1 from '../assets/images/shopping-bag1.png'
 import { useSelector } from 'react-redux';
 import HeaderHome from './HeaderHome';
+import DropDownProfile from './DropDownProfile';
+import ModalFilter from './ModalFilter';
 
 export default function HeaderProfile() {
     const token = useSelector((state)=>state.auth.token)
@@ -32,14 +32,15 @@ export default function HeaderProfile() {
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex align-items-center'>
-                        <button className='btn btn-md' onClick={() => setModalShow(true)}>
-                        <div className='logo-color'><VscFilterFilled size={24} /></div>
-                        </button>
-
-                        <ModalFilter
-                            show={modalShow}
-                            onHide={() => setModalShow(false)}
-                        />
+                    <div className='align-self-center logo-color'>
+                            <button className='btn btn-md' onClick={() => setModalShow(true)}>
+                            <VscFilterFilled size={24} className='logo-color'/>
+                            </button>
+                            <ModalFilter
+                                show={modalShow}
+                                onHide={() => setModalShow(false)}
+                            />
+                            </div>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
                         <Nav.Link eventKey="link-1" href="/mybag">
@@ -57,9 +58,7 @@ export default function HeaderProfile() {
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
-                        <Nav.Link eventKey="link-1" href="/profile">
-                            <div className='align-self-center logo-color'><DropDownProfile /></div>
-                        </Nav.Link>
+                            <DropDownProfile />
                     </Nav.Item>
                 </Nav>
             </header>

@@ -20,14 +20,14 @@ import mg4 from '../../assets/images/Mask Group 4.png'
 // import elipse8 from '../../assets/images/Ellipse 8.png'
 import line48 from '../../assets/images/Line 48.png'
 import { Row } from 'react-bootstrap';
-import HeaderHome from '../../components/HeaderHome';
+import HeaderProfile from '../../components/HeaderProfile';
 
 function ProductDetail() {
 
   return (
     <Container className='mw-100'>
       <Row>
-      <HeaderHome/>
+      <HeaderProfile />
       <nav Style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol className="breadcrumb mt-4">
           <li className="breadcrumb-item active" aria-current="page"><Link to="/">Home</Link></li>
