@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Col } from "react-bootstrap";
-import { FiUser, FiEdit2, FiMapPin, FiClipboard } from "react-icons/fi"
+import { FiUser, FiEdit2, FiMapPin, FiClipboard, FiLogOut } from "react-icons/fi"
 import {Link, useNavigate} from "react-router-dom"
 // import profSide from "../assets/images/sidebar.png" 
 import { useDispatch,useSelector } from "react-redux";
@@ -24,10 +24,6 @@ React.useEffect(() => {
     dispatch(getUsers(token));
   }, [dispatch, token]);
 console.log(users);
-// const onLogout = () => {
-//         localStorage.removeItem("auth");
-//         navigate("/login");
-//     };
   return (
     <>
     <Col className="col-md-3 d-flex flex-column sidebar-wrap side-height h-100">
@@ -76,10 +72,17 @@ console.log(users);
                     </div>
                   </Link>
 
-                  <Button onClick={onLogout}>
-                    Logout
+                  <Button 
+                  className="text-decoration-none text-muted ps-0 pt-0"
+                  variant="grey"
+                  onClick={onLogout}>
+                   <div className="d-flex flex-row gap-3 mt-3">
+                      <div className="icon-wrap-two text-center">
+                        <FiLogOut size={18} className="icon-sidebar" />
+                      </div>
+                      <span>Logout</span>
+                    </div>
                   </Button>
-
             </div>
           </Col>
     </>

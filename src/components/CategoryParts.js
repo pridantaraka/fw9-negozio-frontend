@@ -2,9 +2,11 @@ import jas from '../assets/images/jas.png'
 import React from 'react';
 import '../assets/css/Category.css'
 import { AiTwotoneStar } from 'react-icons/ai'
+import {Link} from "react-router-dom"
 
 function CategoryParts() {
   return (
+    <Link to="/productdetail">
     <div className='data-pd pb-4'>
         <img src={jas} alt='jas' />
         <div className='ps-3 pt-2'>
@@ -14,6 +16,7 @@ function CategoryParts() {
             <div><AiTwotoneStar className='star2' /><AiTwotoneStar className='star2' /><AiTwotoneStar className='star2' /><AiTwotoneStar className='star2' /><AiTwotoneStar className='star2' /> (10)</div>
         </div>
     </div>
+    </Link>
   )
 }
 
