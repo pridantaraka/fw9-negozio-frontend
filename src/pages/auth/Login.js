@@ -1,17 +1,18 @@
 import React from 'react'
-
 import {Container, Col, Form, Button} from 'react-bootstrap'
 import logo  from '../../assets/images/Vector-logo.png'
 import {Formik} from "formik"
 import * as Yup from "yup"
+import { login } from "../../redux/asyncAction/auth";
 import { Link, useNavigate } from 'react-router-dom'
- 
+import { useDispatch, useSelector } from "react-redux";
+
 const loginSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email address format').required('Required'),
     password: Yup.string().min(4).required('Required')
   })
 
-  const AuthValid = ({errors, handleSubmit, handleChange, val}) => {
+  const AuthValid = ({errors, handleSubmit, handleChange, values}) => {
     
     return (
       <>
@@ -19,12 +20,13 @@ const loginSchema = Yup.object().shape({
             <Form noValidate onSubmit={handleSubmit} className="mt-5 gap-2" >
                 
                 <Form.Group  className ="mb-3 mx-auto w-50" controlId="formatBasicEmail">
+                  
                 <Form.Control 
                 name="email" 
                 className="input-login" 
                 onChange={handleChange} 
                 type="email"
-                // value={val}
+                value={values.email}
                 placeholder="Email" 
                 isInvalid={!!errors.email} />
                 <Form.Control.Feedback className="text-start" type="invalid">Invalid email format</Form.Control.Feedback>
@@ -36,7 +38,7 @@ const loginSchema = Yup.object().shape({
                 className="input-login" 
                 onChange={handleChange} 
                 type="password" 
-                // value={val}
+                value={values.password}
                 placeholder="Password" 
                 isInvalid={!!errors.password} />
                 <Form.Control.Feedback className="text-start" type="invalid">Password must be at least 8 characters</Form.Control.Feedback>
@@ -57,18 +59,34 @@ const loginSchema = Yup.object().shape({
 
 
 function Login() {
+    // const navigate = useNavigate();
+
+    // const onLogin = (val) => {
+    //       if(val.email === 'customer@mail.com' && val.password === '1234'){
+    //           console.log(val.email === 'customer@mail.com');
+    //           window.alert('Login success')
+    //           localStorage.setItem("auth", "randomToken");
+    //           navigate("/profile");
+    //         }else{
+    //           window.alert('Login Failed Password Or Email Wrong')
+    //         }
+    //   };
+    const dispatch = useDispatch();
+    const token = useSelector((state) => state.auth.token);
     const navigate = useNavigate();
 
-    const onLogin = (val) => {
-          if(val.email === 'customer@mail.com' && val.password === '1234'){
-              console.log(val.email === 'customer@mail.com');
-              window.alert('Login success')
-              localStorage.setItem("auth", "randomToken");
-              navigate("/profile");
-            }else{
-              window.alert('Login Failed Password Or Email Wrong')
-            }
+    const onLogin = (value) => {
+        const data = { email: value.email, password: value.password };
+        console.log(data);
+        dispatch(login(data));
       };
+    
+      React.useEffect(() => {
+          if (token) {
+            navigate("/profile");
+          }
+       
+      }, [navigate, token]);
 
     return(
         <>
@@ -79,11 +97,9 @@ function Login() {
                   <img src={logo} alt="logo" />
                   <span className="my-3">Negozio</span>
                   </div>
-
                   <h4 className="my-5">Please login with your account</h4>
-
                   <div>
-                  <button className="btn btn-lg button-role customer text-center">Customer</button>
+                  <button className="btn btn-lg button-role customer text-center" value=''>Customer</button>
                   <Link to="/loginseller" className="text-decoration-none">
                   <button className="btn btn-lg button-role text-center">Seller</button>
                   </Link> 
