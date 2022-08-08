@@ -4,7 +4,7 @@ import "../../assets/css/Checkout.css";
 import { Button, Container } from 'react-bootstrap';
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import ModalCheckouAddress from "../../components/ModalChooseAddress";
+import ModalCheckouAddress from "../../components/ModalAddressSelect";
 import Form from 'react-bootstrap/Form';
 
 import checkout1 from "../../assets/images/checkout1.png"

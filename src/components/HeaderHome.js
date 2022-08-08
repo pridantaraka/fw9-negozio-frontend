@@ -1,4 +1,4 @@
-import { Nav, Form, Button } from 'react-bootstrap'
+import { Nav, Form } from 'react-bootstrap'
 import { VscFilterFilled } from "react-icons/vsc";
 import { CgShoppingCart } from "react-icons/cg";
 import React from 'react';
@@ -48,7 +48,7 @@ export default function HeaderHome() {
                     </NavLink> */}
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
                         <Nav.Link eventKey="link-1" href="/login">
-                            <button className='btn nav-button pb-1'>aLogin</button>
+                            <button className='btn nav-button pb-1'>Login</button>
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center'>
