@@ -2,10 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { AiTwotoneStar } from 'react-icons/ai';
 import Button from 'react-bootstrap/Button';
-import CategoryParts from '../../components/CategoryParts';
+// import CategoryParts from '../../components/CategoryParts';
 import DataProductDetail from '../../components/DataProductDetail';
 import Container from 'react-bootstrap/Container';
 import '../../assets/css/ProductsDetail.css';
+import { AmountItem } from '../../components/AmountItem';
 
 import main from '../../assets/images/Mask Group Main.png'
 import mg from '../../assets/images/Mask Group.png'
@@ -18,11 +19,15 @@ import elipse6 from '../../assets/images/Ellipse 6.png'
 import elipse7 from '../../assets/images/Ellipse 7.png'
 import elipse8 from '../../assets/images/Ellipse 8.png'
 import line48 from '../../assets/images/Line 48.png'
+import { Row } from 'react-bootstrap';
+import HeaderHome from '../../components/HeaderHome';
 
 function ProductDetail() {
 
   return (
-    <Container>
+    <Container className='mw-100'>
+      <Row>
+      <HeaderHome/>
       <nav Style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol className="breadcrumb mt-4">
           <li className="breadcrumb-item active" aria-current="page"><Link to="/">Home</Link></li>
@@ -66,34 +71,45 @@ function ProductDetail() {
             <div className='size-jumlah d-flex gap-5'>
               <div>
                 <span className='size mb-3 ms-1'>Size</span>
-                <div>
+                <div className='d-flex d-wrap flex-column gap-2'>
+                <div className='d-flex d-wrap flex-row gap-1'>
                   {/* <span><AiOutlineMinusCircle /></span> */}
-                  <Button variant="outline-dark" className='btn-minus'>-</Button>
+                  {/* <Button variant="outline-dark" className='btn-minus'>-</Button>
                   <span className='mx-2 counter-poin'>28</span>
-                  <Button variant="outline-dark">+</Button>
+                  <Button variant="outline-dark">+</Button> */}
+                  <Button className='btn btn-sm rounded-circle size-button-detail'>XS</Button>
+                  <Button className='btn btn-sm rounded-circle size-button-detail'>S</Button>
+                  <Button className='btn btn-sm rounded-circle size-button-detail'>M</Button>
+
                   {/* <span><AiOutlinePlusCircle /></span> */}
+                </div>
+                <div className='d-flex d-wrap flex-row gap-1'>
+                  <Button className='btn btn-sm rounded-circle size-button-detail'>L</Button>
+                  <Button className='btn btn-sm rounded-circle size-button-detail'>XL</Button>
+                </div>
                 </div>
               </div>
               <div>
                 <span className='jumlah mb-3 ms-1'>Jumlah</span>
                 <div>
                   {/* <span><AiOutlineMinusCircle /></span> */}
-                  <Button variant="outline-dark" className='btn-minus'>-</Button>
+                  {/* <Button variant="outline-dark" className='btn-minus'>-</Button>
                   <span className='mx-2 counter-poin'>1</span>
-                  <Button variant="outline-dark">+</Button>
+                  <Button variant="outline-dark">+</Button> */}
+                  <AmountItem />
                   {/* <span><AiOutlinePlusCircle /></span> */}
                 </div>
               </div>
             </div>
             <div className='pd-button d-flex gap-3 mt-3'>
-              <Link to='/'>
+              <Link to='/chat'>
                 <Button variant="outline-dark" className='chat-bag'>Chat</Button>
               </Link>
-              <Link to='/'>
+              <Link to='/mybag'>
                 <Button variant="outline-dark" className='chat-bag'>Add bag</Button>
               </Link>
-              <Link to='/'>
-                <Button variant="danger" className='buy-now'>Buy Now</Button> 
+              <Link to='/checkout'>
+                <Button className='buy-now'>Buy Now</Button> 
               </Link>
             </div>
           </div>
@@ -153,22 +169,23 @@ function ProductDetail() {
       </div> <hr className='mt-5 mb-5'/>
       <div>
         <h2 className='like-this'>You can also like this</h2>
-        <small className='never-seen'>You’ve never seen it before!</small>
+        <small className='never-seen'>You`ve never seen it before!</small>
       </div>
       <div className='d-flex flex-row gap-4 mb-5 mt-4'>
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
       </div>
       <div className='d-flex flex-row gap-4'>
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
-        <CategoryParts />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
+        <DataProductDetail />
       </div>
+      </Row>
     </Container>
   )
 }
