@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Container, Row, Col, Form, Button} from 'react-bootstrap'
 import Gender from '../../components/Gender'
 import HeaderProfile from '../../components/HeaderProfile'
