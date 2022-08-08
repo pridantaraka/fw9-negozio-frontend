@@ -7,50 +7,6 @@ import profSide from "../../assets/images/prof-pict.png"
 import { getUsers } from '../../redux/asyncAction/users'
 import { useDispatch, useSelector } from 'react-redux'
 import ProfileSeller from './ProfileSeller'
-import {Formik} from "formik"
-import * as Yup from "yup"
-
-const profileEditSchema = Yup.object().shape({
-    name: Yup.string().required('Required'),
-    email: Yup.string().email('Invalid email address format').required('Required'),
-    phonenumber: Yup.number().min(10).max(14).required('A phone number is required')
-  })
-
-const EditProfileValid = ({errors, handleSubmit, handleChange, val}) => {
-
-    return (
-        <>
-            <div className='d-flex flex-row gap-5 my-3 justify-content-around'>
-                            <div className='d-flex flex-column gap-5'>
-                                <div className="d-flex flex-row gap-5 mx-5">
-                                    <span className="text-muted mx-3">Name</span>
-                                    <Form noValidate onSubmit={handleSubmit}>
-                                    <Form.Group  className ="name-form" controlId="formatBasicName">
-                                        <Form.Control name="name" type="name" onChange={handleChange} placeholder="Enter your name" isInvalid={!!errors.name}/>
-                                        <Form.Control.Feedback className="text-start" type="invalid">Name must be at least 8 characters</Form.Control.Feedback>
-                                        </Form.Group>
-                                    </Form>
-                                </div>
-
-                                <div className="d-flex flex-row gap-5 mx-5">
-                                    <span className="text-muted mx-3">Email</span>
-                                    <Form noValidate onSubmit={handleSubmit}>
-                                    <Form.Group  className ="email-form" controlId="formatBasicEmail">
-                                        <Form.Control name="email" type="email" onChange={handleChange} placeholder="Enter your email" isInvalid={!!errors.email}/>
-                                        <Form.Control.Feedback className="text-start" type="invalid">Invalid email format</Form.Control.Feedback>
-                                        </Form.Group>
-                                    </Form>
-                                </div>
-
-                                <div className="d-flex flex-row gap-5">
-                                    <span className="text-muted mx-1">Phone Number</span>
-                                    <Form noValidate onSubmit={handleSubmit}>
-                                    <Form.Group  className ="phone-form" controlId="formatBasicEmail">
-                                        <Form.Control name="phonenumber" type="text" onChange={handleChange} placeholder="Enter your phone number" isInvalid={!!errors.phonenumber}/>
-                                        <Form.Control.Feedback className="text-start" type="invalid">Invalid phone number format</Form.Control.Feedback>
-                                        </Form.Group>
-                                    </Form>
-                                </div>
 
 function Profile(){
     
@@ -78,15 +34,53 @@ function Profile(){
                             <span className="text-muted">Manage your profile information</span>
                             <hr/>
                         </div>
-                        <Formik                                
-                            initialValues={{name: '', email: '', phonenumber: ''}} 
-                            validationSchema={profileEditSchema}>
-                            {(props) =><EditProfileValid {...props} />}
-                        </Formik>
-                        </div>     
-                        <div>
+                    <div className='d-flex flex-row gap-5 my-3 justify-content-around'>
+                    <div className='d-flex flex-column gap-5'>
+                            <div className="d-flex flex-row gap-5 mx-5">
+                                <span className="text-muted mx-3">Name</span>
+                                <Form>
+                                <Form.Group  className ="name-form" controlId="formatBasicName">
+                                    <Form.Control name="name" type="name" placeholder="Enter your name" />
+                                    <Form.Control.Feedback className="text-start" type="invalid">Name must be at least 8 characters</Form.Control.Feedback>
+                                    </Form.Group>
+                                </Form>
+                            </div>
+
+                            <div className="d-flex flex-row gap-5 mx-5">
+                                <span className="text-muted mx-3">Email</span>
+                                <Form>
+                                <Form.Group  className ="email-form" controlId="formatBasicEmail">
+                                    <Form.Control name="email" type="email" placeholder="Enter your email" />
+                                    <Form.Control.Feedback className="text-start" type="invalid">Invalid email format</Form.Control.Feedback>
+                                    </Form.Group>
+                                </Form>
+                            </div>
+
+                            <div className="d-flex flex-row gap-5">
+                                <span className="text-muted mx-1">Phone Number</span>
+                                <Form>
+                                <Form.Group  className ="phone-form" controlId="formatBasicEmail">
+                                    <Form.Control name="phonenumber" type="number" placeholder="Enter your phone number" />
+                                    <Form.Control.Feedback className="text-start" type="invalid">Invalid phone number format</Form.Control.Feedback>
+                                    </Form.Group>
+                                </Form>
+                            </div>
+
+                            <div className="d-flex flex-row gap-5">
+                                <span className="text-muted">Gender</span>
+                                <Gender />
+                            </div>
+
+                            <div className="d-flex flex-row gap-4">
+                                <span className="text-muted">Date of Birth</span>
+                                <Form>
+                                    <Form.Control name="date" type="date" placeholder="dd" />   
+                                </Form>
+                            </div>
+                        
                             <Button variant="danger" className='button-save text-center'>Save</Button>
                         </div>
+
                         <div className="d-flex vertical-rule">
                             <div className="vr"></div>
                         </div>
@@ -101,6 +95,7 @@ function Profile(){
             </Row>
         </Container>    
          : <ProfileSeller />}
+            
         </>
     )
 }
