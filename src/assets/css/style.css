@@ -407,6 +407,15 @@
     background-color: #F6F6F6;
   }
 
+  /* UserInformation */
+  .info-user-text{
+    color: #020202;
+    font-weight: 400;
+    font-family: 'Nunito Sans';
+    width: 400px;
+  }
+  /* UserInformation */
+
 @media only screen and (max-width: 600px) {
   .main-page-bag {
     padding: 50px 20px;
