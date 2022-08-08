@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Col } from "react-bootstrap";
 import { FiUser, FiEdit2, FiMapPin, FiClipboard } from "react-icons/fi"
 import {Link, useNavigate} from "react-router-dom"
-import profSide from "../assets/images/sidebar.png" 
+// import profSide from "../assets/images/sidebar.png" 
 import { useDispatch,useSelector } from "react-redux";
 import { logout } from "../redux/reducers/auth";
 import { getUsers } from '../redux/asyncAction/users'

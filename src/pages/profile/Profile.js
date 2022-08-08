@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {Container, Row, Col, Form, Button} from 'react-bootstrap'
 import Gender from '../../components/Gender'
 import HeaderProfile from '../../components/HeaderProfile'
@@ -10,7 +10,6 @@ import ProfileSeller from './ProfileSeller'
 
 function Profile(){
     
-
     const profile = useSelector((state) =>state.users.result)
     const token = useSelector((state)=>state.auth.token)
     const dispatch = useDispatch()

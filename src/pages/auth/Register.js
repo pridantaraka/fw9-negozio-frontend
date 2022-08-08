@@ -16,7 +16,7 @@ const regisSchema = Yup.object().shape({
 });
 
 const AuthValid = ({ errors, handleSubmit, handleChange }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // const errorMsg = useSelector((state) => state.user.errorMsg);
 

@@ -4,7 +4,6 @@ import HeaderProfile from '../../components/HeaderProfile'
 import ModalAddress from '../../components/ModalAddress'
 import Sidebars from '../../components/Sidebars'
 
-
 function ShippingAddress() {
   return(
       <>
