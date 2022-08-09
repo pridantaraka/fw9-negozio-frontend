@@ -14,7 +14,7 @@ export default function HeaderProfile() {
     return(
         <>
         {token !== null?
-            <header className='mw-100 nav-home-height py-3 d-flex justify-content-around align-items-center all-font'>
+            <header className='mw-100 nav-home-height py-3 d-flex flex-column flex-md-row justify-content-around align-items-center all-font'>
                 <Nav defaultActiveKey="/home" as="ul" className='gap-3'>
                     <Nav.Item as="li" className='logo-color'>
                         <Nav.Link href="/" className='d-flex flex-row'>
@@ -23,13 +23,9 @@ export default function HeaderProfile() {
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex flex-row align-items-center logo-color'>
-                        <Nav.Link eventKey="link-1">
-                            <Form>
-                                <Form.Control size='small' placeholder='Search' type='search' className='nav-search-box'>
-                                
-                                </Form.Control>
-                            </Form>
-                        </Nav.Link>
+                        <Form className="w-100">
+                            <Form.Control size='small' placeholder='Search' type='search' className='nav-search-box'/>
+                        </Form>
                     </Nav.Item>
                     <Nav.Item as="li" className='d-flex align-items-center'>
                     <div className='align-self-center logo-color'>

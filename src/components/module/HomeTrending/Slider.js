@@ -18,9 +18,9 @@ const Slider = () => {
   }, [activeIndex]);
 
   return (
-    <div>
+    <div className="py-4">
       <SliderContent activeIndex={activeIndex} imageSlider={imageSlider} />
-      <Arrow
+      <Arrow 
         prevSlide={() =>
           setActiveIndex(activeIndex < 1 ? len : activeIndex - 1)
         }

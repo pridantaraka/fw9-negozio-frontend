@@ -51,7 +51,7 @@ const AuthValid = ({ errors, handleSubmit, handleChange }) => {
         </Form.Group>
 
         <div>
-          <Button className="btn btn-lg button-auth mt-5 w-50" type="submit">
+          <Button className="btn button-auth mt-5 w-50" type="submit">
             Confirm
           </Button>
         </div>
