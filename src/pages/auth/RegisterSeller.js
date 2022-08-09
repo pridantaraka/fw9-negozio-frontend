@@ -39,7 +39,7 @@ const AuthValid = ({ errors, handleSubmit, handleChange }) => {
         </Form.Group>
 
         <Form.Group className="mb-3 mx-auto w-50" controlId="formatBasicPhoneNumber">
-          <Form.Control name="phone_number" onChange={handleChange} type="number" placeholder="Phone Number" isInvalid={!!errors.phone_number} />
+          <Form.Control name="phone_number" onChange={handleChange} type="text" placeholder="Phone Number" isInvalid={!!errors.phone_number} />
           <Form.Control.Feedback className="text-start" type="invalid"></Form.Control.Feedback>
         </Form.Group>
 
