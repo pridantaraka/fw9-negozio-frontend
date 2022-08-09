@@ -19,16 +19,16 @@ function Home() {
                     <section className="slider d-flex flex-column">
                         <Trending />
                         <Row className="carousel-products">
-                            <Col sm={4}>
-                                <div className="category">
+                            <Col sm={4} className='d-flex flex-column align-items-center justify-content-center mb-sm-5 pb-sm-5'>
+                                <div className="category mb-sm-5">
                                     <h1 className="category-title">Category</h1>
                                     <p className="category-text mt-3">
                                         What are you currently looking for?
                                     </p>
                                 </div>
                             </Col>
-                            <Col sm={8}>
-                                <div className="slider-category d-flex justify-content-center align-items-center w-100">
+                            <Col sm={8} className='d-flex flex-column justify-content-center'>
+                                <div className="slider-category d-flex justify-content-center align-items-center w-100 mt-5">
                                     <Category />
                                 </div>
                             </Col>

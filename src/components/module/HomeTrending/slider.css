@@ -91,3 +91,12 @@
 .dot:hover {
     background-color: #8e8a8a;
 }
+
+@media (max-width: 450px) {
+    .prev {
+        left: 30%;
+    }
+    .next {
+        right: 30%;
+    }   
+}
