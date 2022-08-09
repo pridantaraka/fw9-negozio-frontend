@@ -6,30 +6,23 @@ import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { registerSeller } from '../../redux/asyncAction/auth';
+import { register } from '../../redux/asyncAction/auth';
+import Button from 'react-bootstrap/Button';
 
 const regisSchema = Yup.object().shape({
-  name: Yup.string().min(6, 'Name length must be at least 6 characters').required('Required'),
+  full_name: Yup.string().min(6, 'Name length must be at least 6 characters').required('Required'),
   email: Yup.string().email('Invalid email address format').required('Required'),
-  storename: Yup.string().min(6),
-  phonenumber: Yup.number().min(10).required('Required'),
+  store_name: Yup.string().min(6),
+  phone_number: Yup.number().min(10).required('Required'),
   password: Yup.string().min(8).required('Required'),
 });
 
 const AuthValid = ({ errors, handleSubmit, handleChange }) => {
-  const successMsg = useSelector((state) => state.auth.successMsg);
-  const navigate = useNavigate();
-
-  React.useEffect(() => {
-    if (successMsg) {
-      navigate('/login', { state: { successMsg } });
-    }
-  }, [navigate, successMsg]);
   return (
     <>
       <Form noValidate onSubmit={handleSubmit} className="mt-5 gap-2">
         <Form.Group className="mb-3 mx-auto w-50" controlId="formatBasicUsername">
-          <Form.Control name="name" onChange={handleChange} type="text" placeholder="Name" isInvalid={!!errors.name} />
+          <Form.Control name="full_name" onChange={handleChange} type="text" placeholder="Name" isInvalid={!!errors.full_name} />
           <Form.Control.Feedback className="text-start" type="invalid"></Form.Control.Feedback>
         </Form.Group>
 
@@ -41,12 +34,12 @@ const AuthValid = ({ errors, handleSubmit, handleChange }) => {
         </Form.Group>
 
         <Form.Group className="mb-3 mx-auto w-50" controlId="formatBasicStoreName">
-          <Form.Control name="storename" onChange={handleChange} type="text" placeholder="Store Name" isInvalid={!!errors.storename} />
+          <Form.Control name="store_name" onChange={handleChange} type="text" placeholder="Store Name" isInvalid={!!errors.store_name} />
           <Form.Control.Feedback className="text-start" type="invalid"></Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="mb-3 mx-auto w-50" controlId="formatBasicPhoneNumber">
-          <Form.Control name="phonenumber" onChange={handleChange} type="number" placeholder="Phone Number" isInvalid={!!errors.phonenumber} />
+          <Form.Control name="phone_number" onChange={handleChange} type="number" placeholder="Phone Number" isInvalid={!!errors.phone_number} />
           <Form.Control.Feedback className="text-start" type="invalid"></Form.Control.Feedback>
         </Form.Group>
 
@@ -56,11 +49,13 @@ const AuthValid = ({ errors, handleSubmit, handleChange }) => {
             Password must be at least 8 characters
           </Form.Control.Feedback>
         </Form.Group>
-      </Form>
 
-      <div>
-        <button className="btn btn-lg button-auth mt-5 w-50">Confirm</button>
-      </div>
+        <div>
+          <Button className="btn btn-lg button-auth mt-5 w-50" type="submit">
+            Confirm
+          </Button>
+        </div>
+      </Form>
 
       <div className="text-center my-5">
         Already have a Negozio account? Let's{' '}
@@ -75,12 +70,20 @@ const AuthValid = ({ errors, handleSubmit, handleChange }) => {
 function RegisterSeller() {
   const dispatch = useDispatch();
   // const token = useSelector((state) => state.user.token);
+
+  const successMsg = useSelector((state) => state.auth.successMsg);
   const navigate = useNavigate();
 
   const onRegister = (value) => {
-    console.log('tes');
-    dispatch(registerSeller(value));
+    console.log(value);
+    dispatch(register(value));
   };
+
+  React.useEffect(() => {
+    if (successMsg) {
+      navigate('/loginseller', { state: { successMsg } });
+    }
+  }, [navigate, successMsg]);
   return (
     <>
       <Container className="all-font">
@@ -99,7 +102,7 @@ function RegisterSeller() {
             <button className="btn btn-lg button-role customer text-center">Seller</button>
           </div>
 
-          <Formik initialValues={{ name: '', email: '', storename: '', phonenumber: '', password: '' }} validationSchema={regisSchema}>
+          <Formik initialValues={{ role: 2, full_name: '', email: '', store_name: '', phone_number: 0, password: '' }} onSubmit={onRegister} validationSchema={regisSchema}>
             {(props) => <AuthValid {...props} />}
           </Formik>
         </Col>
