@@ -34,13 +34,13 @@ React.useEffect(() => {
             <Dropdown.Item>
                 <div className='info-user-text d-flex flex-row gap-2'>
                     <div>
-                    <span><img src={`http://${profile.profile_picture}`} alt="profile-sidebar" className="img-fluid sidebar-prof"></img></span>
+                    <span><img src={`http://${profile?.profile_picture}`} alt="profile-sidebar" className="img-fluid sidebar-prof"></img></span>
                     </div>
                     <div className='d-flex flex-column justify-content-around'>
-                    <span>Name : {profile.full_name}</span>
-                    <span>Email : {profile.email}</span>
-                    <span>Phone : {profile.phone_number}</span>
-                    <span>Gender : {profile.gender}</span>
+                    <span>Name : {profile?.full_name}</span>
+                    <span>Email : {profile?.email}</span>
+                    <span>Phone : {profile?.phone_number}</span>
+                    <span>Gender : {profile?.gender}</span>
                     </div>
                 </div>
             </Dropdown.Item>
