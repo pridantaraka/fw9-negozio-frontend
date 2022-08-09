@@ -77,7 +77,7 @@ function Register() {
   }, [navigate, successMsg]);
   return (
     <>
-      <Container className="all-font">
+      <Container className="all-font mw-100">
         <Col className="m-5 p-5 text-center justify-content-center align-items-center">
           <div className="image-fluid d-flex justify-content-center gap-3">
             <img src={logo} alt="logo" />

@@ -13,15 +13,17 @@ export const getUsers = createAsyncThunk('user/getUser', async(token)=>{
 });
 export const updateUsers = createAsyncThunk('/users/updateUsers', async(request)=>{
     const result = {};
+    console.log(request);
     try {
       const token = request.token;
       const formData = new FormData();
-      formData.append('full_name', request.full_name);
+      formData.append('full_name', request.name);
       formData.append('email', request.email);
-      formData.append('phone_number', request.phone_number);
+      formData.append('phone_number', request.phonenumber);
       formData.append('gender', request.gender);
-      formData.append('date_of_birth', request.picture);
-      const {data} = await http(token).patch('/users', formData, {
+      formData.append('date_of_birth', request.dateBirth);
+      formData.append('picture', request.picture);
+      const {data} = await http(token).patch('/user', formData, {
         headers: {
           'content-type' : 'multipart/form-data'
         }
