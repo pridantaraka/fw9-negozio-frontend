@@ -87,47 +87,46 @@ React.useEffect(() => {
                   </Link>
             </div> */}
 
-<Accordion className='mt-md-5'>
-      <Accordion.Item eventKey="0" style={{border: "unset"}}>
-        <Accordion.Header><FiHome style={{marginRight: "1vw", backgroundColor: "#456BF3", borderRadius: "2vw", width: "2vw",
-    height: "2vw", padding: "5px", color: "#FFFFFF"}}/>   Store</Accordion.Header>
-        <Link to="/">
-          <Accordion.Body className='ms-md-5'>Store profile</Accordion.Body>
-        </Link>
-      </Accordion.Item>
-      <Accordion.Item eventKey="1" style={{border: "unset"}}>
-        <Accordion.Header><FiBox style={{marginRight: "1vw", backgroundColor: "#F36F45", borderRadius: "2vw", width: "2vw",
-    height: "2vw", padding: "5px", color: "#FFFFFF"}}/>Product</Accordion.Header>
-        <Link to="/">
-          <Accordion.Body className='ms-md-5'>My products</Accordion.Body>
-        </Link>
-        <Link to="/">
-          <Accordion.Body className='ms-md-5'>Selling products</Accordion.Body>
-        </Link>
-      </Accordion.Item>
-      <Accordion.Item eventKey="2" style={{border: "unset"}}>
-        <Accordion.Header><FiShoppingCart style={{marginRight: "1vw", backgroundColor: "#F3456F", borderRadius: "2vw", width: "2vw",
-    height: "2vw", padding: "5px", color: "#FFFFFF"}}/>Order</Accordion.Header>
-        <Link to="/">
-          <Accordion.Body className='ms-md-5'>My order</Accordion.Body>
-        </Link>
-        <Link to="/">
-          <Accordion.Body className='ms-md-5'>Order cancel</Accordion.Body>
-        </Link>
-      </Accordion.Item>
-    </Accordion>
-      <Button 
-        className="text-decoration-none text-muted ps-0 pt-0"
-        variant="grey"
-        onClick={onLogout}>
-        <div className="d-flex flex-row gap-3 mt-3">
-            <div className="icon-wrap-two text-center">
-              <FiLogOut size={18} className="icon-sidebar" />
-            </div>
-            <span>Logout</span>
-          </div>
+      <Accordion className='mt-md-5'>
+            <Accordion.Item eventKey="0" style={{border: "unset"}}>
+              <Accordion.Header><FiHome style={{marginRight: "1vw", backgroundColor: "#456BF3", borderRadius: "2vw", width: "2vw",
+          height: "2vw", padding: "5px", color: "#FFFFFF"}}/>   Store</Accordion.Header>
+              <Link to="/">
+                <Accordion.Body className='ms-md-5'>Store profile</Accordion.Body>
+              </Link>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1" style={{border: "unset"}}>
+              <Accordion.Header><FiBox style={{marginRight: "1vw", backgroundColor: "#F36F45", borderRadius: "2vw", width: "2vw",
+          height: "2vw", padding: "5px", color: "#FFFFFF"}}/>Product</Accordion.Header>
+              <Link to="/">
+                <Accordion.Body className='ms-md-5'>My products</Accordion.Body>
+              </Link>
+              <Link to="/">
+                <Accordion.Body className='ms-md-5'>Selling products</Accordion.Body>
+              </Link>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2" style={{border: "unset"}}>
+              <Accordion.Header><FiShoppingCart style={{marginRight: "1vw", backgroundColor: "#F3456F", borderRadius: "2vw", width: "2vw",
+          height: "2vw", padding: "5px", color: "#FFFFFF"}}/>Order</Accordion.Header>
+              <Link to="/">
+                <Accordion.Body className='ms-md-5'>My order</Accordion.Body>
+              </Link>
+              <Link to="/">
+                <Accordion.Body className='ms-md-5'>Order cancel</Accordion.Body>
+              </Link>
+            </Accordion.Item>
+          </Accordion>
+            <Button 
+              className="text-decoration-none text-muted ps-0 pt-0"
+              variant="grey"
+              onClick={onLogout}>
+              <div className="d-flex flex-row gap-3 mt-3">
+                  <div className="icon-wrap-two text-center">
+                    <FiLogOut size={18} className="icon-sidebar" />
+                  </div>
+                  <span>Logout</span>
+                </div>
         </Button>
-      </div>
     </Col>
     </>   
   );

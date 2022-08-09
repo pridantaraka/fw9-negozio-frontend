@@ -5,6 +5,9 @@ import SidebarSeller from '../../components/SidebarSeller'
 import profSide from "../../assets/images/prof-pict.png"
 import * as Yup from "yup"
 import {Formik} from "formik" 
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { getUsers, updateUsers } from '../../redux/asyncAction/users'
 
 const profileEdit = Yup.object().shape({
   storeName: Yup.string().required('Name must be at least 8 characters'),
@@ -14,6 +17,11 @@ const profileEdit = Yup.object().shape({
 })
 
 const EditProfileValid = ({errors, handleSubmit, handleChange}) => {
+    // const users = useSelector((state)=>state.users.result);
+    // const [dataFullName, setDataFullName] = React.useState(users.full_name);
+    // const [dataEmail, setDataEmail] = React.useState(users.email);
+    // const [dataPhoneNumber, setDataPhoneNumber] = React.useState(users.phone_number);
+    // const [dataStoreDesc, setDataStoreDesc] = React.useState(users.store_description);
   return (
     <>
          <div className="d-flex flex-row gap-5 justify-content-between">
@@ -61,6 +69,25 @@ const EditProfileValid = ({errors, handleSubmit, handleChange}) => {
 }
 
 function ProfileSeller() {
+    // const redirect = useNavigate();
+    const profile = useSelector((state) =>state.users.result)
+    const token = useSelector((state)=>state.auth.token)
+    const dispatch = useDispatch()
+
+    // const onSubmitEditUser = (val) => {
+    //     console.log(val.picture);
+    //     const data = {token: token, 
+    //     full_name: val.full_name === '' ? profile.full_name : val.full_name, 
+    //     email: val.email === '' ? profile.email : val.email, 
+    //     phoneNumber: val.phoneNumber === '' ? profile.phone_number : val.phoneNumber, 
+    //     StoreDesc: val.StoreDesc === '' ? profile.store_description : val.StoreDesc};
+    //     dispatch(updateUsers(data));
+    //     redirect('/home/profile/details');
+    //   };
+      React.useEffect(()=>{
+        dispatch(getUsers(token))
+    },[dispatch, token])
+    console.log(profile);
     return(
         <>
             <Container className='mw-100 main-container'>
@@ -77,7 +104,8 @@ function ProfileSeller() {
                             
                            <div className='d-flex flex-row gap-5 my-3'>
                             <div className='d-flex flex-column gap-5'>
-                                <Formik                                
+                                <Formik
+                                    // onSubmit={onSubmitEditUser}                                
                                     initialValues={{storeName: '', phonenumber: '', description: '', email: ''}} 
                                     validationSchema={profileEdit}>
                                 {(props) =><EditProfileValid {...props} />}

@@ -15,7 +15,6 @@ export const users = createSlice({
         })
         build.addCase(updateUsers.fulfilled, (state, action)=>{
             state.result = action.payload?.results;
-            state.successMsg = action.payload?.results.message;
         });
     }
 })
